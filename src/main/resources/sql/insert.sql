@@ -10,73 +10,73 @@ values
 insert into courses ( description, name, company_id)
 values
     ('Курс про то, как настраивать авторизацию, проверять пароли, хранить секретные данные',
-     'Безопасный Backend', (SELECT company_id FROM companies WHERE short_name='БСПб')),
+     'Безопасный Backend', (SELECT id FROM companies WHERE short_name='БСПб')),
     ('Про то, как собирать и анализировать данные, связанные с финансами',
-     'Финансовая аналитика', (SELECT company_id FROM companies WHERE short_name='БСПб')),
+     'Финансовая аналитика', (SELECT id FROM companies WHERE short_name='БСПб')),
 
     ('MS SQL is powerful and robust DBMS, in course you will be taught how to write effective queries',
-     'MS SQL', (SELECT company_id FROM companies WHERE short_name='MS')),
+     'MS SQL', (SELECT id FROM companies WHERE short_name='MS')),
     ('Short tour on Azure platform',
-     'Azure', (SELECT company_id FROM companies WHERE short_name='MS')),
+     'Azure', (SELECT id FROM companies WHERE short_name='MS')),
     ('By the end of the course you will write your own VSCode Extension',
-     'VSCode engineering', (SELECT company_id FROM companies WHERE short_name='MS')),
+     'VSCode engineering', (SELECT id FROM companies WHERE short_name='MS')),
     ('MS Word is powerful text editor. If you want to write your coursework, you can rely on MS Word',
-     'Coursework in Word', (SELECT company_id FROM companies WHERE short_name='MS')),
+     'Coursework in Word', (SELECT id FROM companies WHERE short_name='MS')),
 
     ('На этом спецкурсе разбираются темы, которые в основной курс не помещаются',
-     'Актуальные задачи современного ФА и МФ', (SELECT company_id FROM companies WHERE short_name='ВМК МГУ')),
+     'Актуальные задачи современного ФА и МФ', (SELECT id FROM companies WHERE short_name='ВМК МГУ')),
     ('Rust многие называют убийцей C++',
-     'Язык Rust', (SELECT company_id FROM companies WHERE short_name='ВМК МГУ'));
+     'Язык Rust', (SELECT id FROM companies WHERE short_name='ВМК МГУ'));
 
 
 insert into teachers (education, fathername, lastname, mail, name, company_id)
 values
-    ('ВМК МГУ', null, 'Петров', 'petrov@cs.msu.ru', 'Иван', (SELECT company_id FROM companies WHERE short_name = 'ВМК МГУ')),
-    ('ВМК МГУ', null, 'Капустин', 'cabbage@mail.ru', 'Николай', (SELECT company_id FROM companies WHERE short_name = 'ВМК МГУ')),
-    ('ВМК МГУ', null, 'Чернов', 'blackav@cs.msu.ru', 'Александр', (SELECT company_id FROM companies WHERE short_name = 'ВМК МГУ')),
+    ('ВМК МГУ', null, 'Петров', 'petrov@cs.msu.ru', 'Иван', (SELECT id FROM companies WHERE short_name = 'ВМК МГУ')),
+    ('ВМК МГУ', null, 'Капустин', 'cabbage@mail.ru', 'Николай', (SELECT id FROM companies WHERE short_name = 'ВМК МГУ')),
+    ('ВМК МГУ', null, 'Чернов', 'blackav@cs.msu.ru', 'Александр', (SELECT id FROM companies WHERE short_name = 'ВМК МГУ')),
 
-    ('БСПб', null, 'Денских', 'savaden@b.spb.ru', 'Савелий', (SELECT company_id FROM companies WHERE short_name = 'БСПб')),
+    ('БСПб', null, 'Денских', 'savaden@b.spb.ru', 'Савелий', (SELECT id FROM companies WHERE short_name = 'БСПб')),
 
-    ('MS', null, 'Jim', 'jcol@onenote.com', 'Colins', (SELECT company_id FROM companies WHERE short_name = 'MS')),
-    ('MS', null, 'Tony', 'tonybony@onenote.com', 'Brown', (SELECT company_id FROM companies WHERE short_name = 'MS')),
-    ('MS', null, 'Steve', 'levinski.steve@onenote.com', 'Levinski', (SELECT company_id FROM companies WHERE short_name = 'MS'));
+    ('MS', null, 'Colins', 'jcol@onenote.com', 'Jim', (SELECT id FROM companies WHERE short_name = 'MS')),
+    ('MS', null, 'Brown', 'tonybony@onenote.com', 'Tony', (SELECT id FROM companies WHERE short_name = 'MS')),
+    ('MS', null, 'Levinski', 'levinski.steve@onenote.com', 'Steve', (SELECT id FROM companies WHERE short_name = 'MS'));
 
 insert into teachers_courses ( course_id, teacher_id)
 values
-    ((SELECT course_id FROM courses WHERE name = 'Актуальные задачи современного ФА и МФ'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Капустин')
+    ((SELECT id FROM courses WHERE name = 'Актуальные задачи современного ФА и МФ'),
+     (SELECT id FROM teachers WHERE lastname = 'Капустин')
      ),
-    ((SELECT course_id FROM courses WHERE name = 'Язык Rust'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Чернов')
+    ((SELECT id FROM courses WHERE name = 'Язык Rust'),
+     (SELECT id FROM teachers WHERE lastname = 'Чернов')
      ),
-    ((SELECT course_id FROM courses WHERE name = 'Язык Rust'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Петров')
-     ),
-
-    ((SELECT course_id FROM courses WHERE name = 'Безопасный Backend'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Денских')
-     ),
-    ((SELECT course_id FROM courses WHERE name = 'Финансовая аналитика'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Денских')
+    ((SELECT id FROM courses WHERE name = 'Язык Rust'),
+     (SELECT id FROM teachers WHERE lastname = 'Петров')
      ),
 
-    ((SELECT course_id FROM courses WHERE name = 'Coursework in Word'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Colins')
+    ((SELECT id FROM courses WHERE name = 'Безопасный Backend'),
+     (SELECT id FROM teachers WHERE lastname = 'Денских')
      ),
-    ((SELECT course_id FROM courses WHERE name = 'MS SQL'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Colins')
+    ((SELECT id FROM courses WHERE name = 'Финансовая аналитика'),
+     (SELECT id FROM teachers WHERE lastname = 'Денских')
      ),
-    ((SELECT course_id FROM courses WHERE name = 'VSCode engineering'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Brown')
+
+    ((SELECT id FROM courses WHERE name = 'Coursework in Word'),
+     (SELECT id FROM teachers WHERE lastname = 'Colins')
      ),
-    ((SELECT course_id FROM courses WHERE name = 'Azure'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Brown')
+    ((SELECT id FROM courses WHERE name = 'MS SQL'),
+     (SELECT id FROM teachers WHERE lastname = 'Colins')
      ),
-    ((SELECT course_id FROM courses WHERE name = 'Azure'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Levinski')
+    ((SELECT id FROM courses WHERE name = 'VSCode engineering'),
+     (SELECT id FROM teachers WHERE lastname = 'Brown')
      ),
-    ((SELECT course_id FROM courses WHERE name = 'MS SQL'),
-     (SELECT teacher_id FROM teachers WHERE lastname = 'Levinski')
+    ((SELECT id FROM courses WHERE name = 'Azure'),
+     (SELECT id FROM teachers WHERE lastname = 'Brown')
+     ),
+    ((SELECT id FROM courses WHERE name = 'Azure'),
+     (SELECT id FROM teachers WHERE lastname = 'Levinski')
+     ),
+    ((SELECT id FROM courses WHERE name = 'MS SQL'),
+     (SELECT id FROM teachers WHERE lastname = 'Levinski')
      );
 
 insert into students (lastname, name, phone)
@@ -90,18 +90,18 @@ values
 
 insert into students_courses (course_id, student_id)
 values
-    ((SELECT course_id FROM courses WHERE name='Язык Rust'),(SELECT id FROM students WHERE lastname='Межуев')),
-    ((SELECT course_id FROM courses WHERE name='Язык Rust'),(SELECT id FROM students WHERE lastname='Митрофанов')),
-    ((SELECT course_id FROM courses WHERE name='Язык Rust'),(SELECT id FROM students WHERE lastname='Опрышко')),
-    ((SELECT course_id FROM courses WHERE name='Актуальные задачи современного ФА и МФ'),(SELECT id FROM students WHERE lastname='Латыпова')),
-    ((SELECT course_id FROM courses WHERE name='Актуальные задачи современного ФА и МФ'),(SELECT id FROM students WHERE lastname='Межуев')),
-    ((SELECT course_id FROM courses WHERE name='Актуальные задачи современного ФА и МФ'),(SELECT id FROM students WHERE lastname='Опрышко')),
-    ((SELECT course_id FROM courses WHERE name='Актуальные задачи современного ФА и МФ'),(SELECT id FROM students WHERE lastname='Митрофанов')),
-    ((SELECT course_id FROM courses WHERE name='Azure'),(SELECT id FROM students WHERE lastname='Дударенко')),
-    ((SELECT course_id FROM courses WHERE name='Финансовая аналитика'),(SELECT id FROM students WHERE lastname='Иванова')),
-    ((SELECT course_id FROM courses WHERE name='Финансовая аналитика'),(SELECT id FROM students WHERE lastname='Митрофанов')),
-    ((SELECT course_id FROM courses WHERE name='MS SQL'),(SELECT id FROM students WHERE lastname='Дударенко')),
-    ((SELECT course_id FROM courses WHERE name='MS SQL'),(SELECT id FROM students WHERE lastname='Латыпова'));
+    ((SELECT id FROM courses WHERE name='Язык Rust'),(SELECT id FROM students WHERE lastname='Межуев')),
+    ((SELECT id FROM courses WHERE name='Язык Rust'),(SELECT id FROM students WHERE lastname='Митрофанов')),
+    ((SELECT id FROM courses WHERE name='Язык Rust'),(SELECT id FROM students WHERE lastname='Опрышко')),
+    ((SELECT id FROM courses WHERE name='Актуальные задачи современного ФА и МФ'),(SELECT id FROM students WHERE lastname='Латыпова')),
+    ((SELECT id FROM courses WHERE name='Актуальные задачи современного ФА и МФ'),(SELECT id FROM students WHERE lastname='Межуев')),
+    ((SELECT id FROM courses WHERE name='Актуальные задачи современного ФА и МФ'),(SELECT id FROM students WHERE lastname='Опрышко')),
+    ((SELECT id FROM courses WHERE name='Актуальные задачи современного ФА и МФ'),(SELECT id FROM students WHERE lastname='Митрофанов')),
+    ((SELECT id FROM courses WHERE name='Azure'),(SELECT id FROM students WHERE lastname='Дударенко')),
+    ((SELECT id FROM courses WHERE name='Финансовая аналитика'),(SELECT id FROM students WHERE lastname='Иванова')),
+    ((SELECT id FROM courses WHERE name='Финансовая аналитика'),(SELECT id FROM students WHERE lastname='Митрофанов')),
+    ((SELECT id FROM courses WHERE name='MS SQL'),(SELECT id FROM students WHERE lastname='Дударенко')),
+    ((SELECT id FROM courses WHERE name='MS SQL'),(SELECT id FROM students WHERE lastname='Латыпова'));
 
 
 
@@ -111,18 +111,18 @@ values
      (SELECT teach_cour_id
       FROM teachers_courses
       WHERE
-          teacher_id = (SELECT teacher_id FROM teachers WHERE lastname='Чернов')
+          teacher_id = (SELECT id FROM teachers WHERE lastname='Чернов')
         AND
-          course_id = (SELECT course_id FROM courses WHERE name='Язык Rust')
+          course_id = (SELECT id FROM courses WHERE name='Язык Rust')
       )
     ),
     ('523', 'Среда', '10:20', '8:45',
      (SELECT teach_cour_id
       FROM teachers_courses
       WHERE
-          teacher_id = (SELECT teacher_id FROM teachers WHERE lastname='Петров')
+          teacher_id = (SELECT id FROM teachers WHERE lastname='Петров')
         AND
-          course_id = (SELECT course_id FROM courses WHERE name='Язык Rust')
+          course_id = (SELECT id FROM courses WHERE name='Язык Rust')
       )
     ),
 
@@ -130,9 +130,9 @@ values
      (SELECT teach_cour_id
       FROM teachers_courses
       WHERE
-          teacher_id = (SELECT teacher_id FROM teachers WHERE lastname='Капустин')
+          teacher_id = (SELECT id FROM teachers WHERE lastname='Капустин')
         AND
-          course_id = (SELECT course_id FROM courses WHERE name='Актуальные задачи современного ФА и МФ')
+          course_id = (SELECT id FROM courses WHERE name='Актуальные задачи современного ФА и МФ')
       )
     ),
 
@@ -140,18 +140,18 @@ values
      (SELECT teach_cour_id
       FROM teachers_courses
       WHERE
-          teacher_id = (SELECT teacher_id FROM teachers WHERE lastname='Levinski')
+          teacher_id = (SELECT id FROM teachers WHERE lastname='Levinski')
         AND
-          course_id = (SELECT course_id FROM courses WHERE name='Azure')
+          course_id = (SELECT id FROM courses WHERE name='Azure')
       )
     ),
     ('П-8А', 'Четверг', '17:50', '16:20',
      (SELECT teach_cour_id
       FROM teachers_courses
       WHERE
-          teacher_id = (SELECT teacher_id FROM teachers WHERE lastname='Levinski')
+          teacher_id = (SELECT id FROM teachers WHERE lastname='Levinski')
         AND
-          course_id = (SELECT course_id FROM courses WHERE name='Azure')
+          course_id = (SELECT id FROM courses WHERE name='Azure')
       )
     ),
 
@@ -159,9 +159,9 @@ values
      (SELECT teach_cour_id
       FROM teachers_courses
       WHERE
-          teacher_id = (SELECT teacher_id FROM teachers WHERE lastname='Levinski')
+          teacher_id = (SELECT id FROM teachers WHERE lastname='Levinski')
         AND
-          course_id = (SELECT course_id FROM courses WHERE name='MS SQL')
+          course_id = (SELECT id FROM courses WHERE name='MS SQL')
       )
     ),
 
@@ -169,8 +169,8 @@ values
      (SELECT teach_cour_id
       FROM teachers_courses
       WHERE
-          teacher_id = (SELECT teacher_id FROM teachers WHERE lastname='Денских')
+          teacher_id = (SELECT id FROM teachers WHERE lastname='Денских')
         AND
-          course_id = (SELECT course_id FROM courses WHERE name='Финансовая Аналитика')
+          course_id = (SELECT id FROM courses WHERE name='Финансовая Аналитика')
       )
     );
