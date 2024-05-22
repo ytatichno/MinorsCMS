@@ -17,11 +17,11 @@ public class Company {
     @NonNull
     private Long id;
 
-    @Column(nullable = false, name = "name")
+    @Column(nullable = false, name = "name", unique = true)
     @NonNull
     private String name;
 
-    @Column(name = "short_name")
+    @Column(name = "short_name", unique = true)
     @NonNull
     private String short_name;
 
