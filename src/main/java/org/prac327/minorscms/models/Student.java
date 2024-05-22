@@ -14,8 +14,6 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(nullable = false, name = "student_id")
-//    @NonNull
     private Long id;
 
     @Column(nullable = false, name = "lastname")

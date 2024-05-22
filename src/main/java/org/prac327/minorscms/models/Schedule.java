@@ -14,8 +14,6 @@ public class Schedule  {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, name = "schedule_id")
-    @NonNull
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)

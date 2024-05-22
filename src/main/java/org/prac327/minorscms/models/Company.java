@@ -13,8 +13,6 @@ public class Company {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, name = "company_id")
-    @NonNull
     private Long id;
 
     @Column(nullable = false, name = "name", unique = true)

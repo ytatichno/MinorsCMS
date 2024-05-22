@@ -13,8 +13,8 @@ public class Teacher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, name = "teacher_id")
-    @NonNull
+//    @Column(nullable = false, name = "teacher_id")
+//    @NonNull
     private Long id;
 
     @Column(nullable = false, name = "lastname")
