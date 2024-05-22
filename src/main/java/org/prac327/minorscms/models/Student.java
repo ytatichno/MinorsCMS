@@ -1,9 +1,11 @@
 package org.prac327.minorscms.models;
 
-import lombok.*;
-
 import jakarta.persistence.*;
-import java.sql.Date;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -34,6 +36,9 @@ public class Student {
 
     @Column(name = "photo")
     private String photo;
+
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "student", fetch = FetchType.LAZY)
+    List<Students2Courses> courses;
 
 
     @Override

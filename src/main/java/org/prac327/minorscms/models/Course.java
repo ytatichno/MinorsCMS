@@ -1,8 +1,12 @@
 package org.prac327.minorscms.models;
 
-import lombok.*;
-
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.ToString;
+
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -19,7 +23,7 @@ public class Course {
     @NonNull
     private String name;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "company_id")
     @ToString.Exclude
     @NonNull
@@ -34,6 +38,12 @@ public class Course {
 
     @Column(name = "plan")
     private String plan;  // url to file with course plan
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "course", fetch = FetchType.LAZY)
+    List<Students2Courses> students;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "course", fetch = FetchType.LAZY)
+    List<Teachers2Courses> teachers;
 
     @Override
     public boolean equals(Object o) {

@@ -1,8 +1,12 @@
 package org.prac327.minorscms.models;
 
-import lombok.*;
-
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.ToString;
+
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -13,8 +17,6 @@ public class Teacher {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(nullable = false, name = "teacher_id")
-//    @NonNull
     private Long id;
 
     @Column(nullable = false, name = "lastname")
@@ -45,6 +47,9 @@ public class Teacher {
 
     @Column(name = "photo")
     private String photo;
+
+    @OneToMany(cascade=CascadeType.ALL, mappedBy = "teacher", fetch = FetchType.LAZY)
+    List<Teachers2Courses> courses;
 
     @Override
     public boolean equals(Object o) {

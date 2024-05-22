@@ -1,41 +1,39 @@
 package org.prac327.minorscms.models;
 
-import lombok.*;
-
 import jakarta.persistence.*;
-import java.util.Objects;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.ToString;
 
 @Entity
-@Table(name = "students_courses")
+@Table(name = "students_courses",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = {"student_id", "course_id"})
+        }
+)
 @Data
 @NoArgsConstructor
-public class Students2Courses{
+public class Students2Courses {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(nullable = false, name = "stud_cour_id")
-    @NonNull
+    @Column(name = "stud_cour_id", unique = true, nullable = false)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "course_id")
-    @ToString.Exclude
-    @NonNull
-    private Course course_id;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "student_id")
+    @JoinColumn(name = "student_id", nullable = false)
     @ToString.Exclude
     @NonNull
-    private Student student_id;
+    private Student student;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Students2Courses other = (Students2Courses) o;
-        return Objects.equals(id, other.id)
-                && Objects.equals(course_id, other.course_id)
-                && Objects.equals(student_id, other.student_id);
-    }
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "course_id", nullable = false)
+    @ToString.Exclude
+    @NonNull
+    private Course course;
+
+
 }
