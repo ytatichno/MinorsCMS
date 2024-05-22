@@ -19,9 +19,9 @@ public class Company {
     @NonNull
     private String name;
 
-    @Column(name = "short_name", unique = true)
+    @Column(name = "shortname", unique = true)
     @NonNull
-    private String short_name;
+    private String shortname;
 
     @Column(name = "photo")
     private String photo;
@@ -38,20 +38,26 @@ public class Company {
     @NonNull
     private String address;
 
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Company other = (Company) o;
-        return Objects.equals(id, other.id)
-                && name.equals(other.name)
-                && short_name.equals(other.short_name)
-                && photo.equals(other.photo)
-                && description.equals(other.description)
-                && phone.equals(other.phone)
-//                && mail.equals(other.mail)
-                && address.equals(other.address);
+    public Company(String name, String shortname, String description, String address) {
+        this.name = name;
+        this.shortname = shortname;
+        this.description = description;
+        this.address = address;
     }
+
+
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (o == null || getClass() != o.getClass()) return false;
+//        Company other = (Company) o;
+//        return Objects.equals(id, other.id)
+//                && name.equals(other.name)
+////                && short_name.equals(other.short_name)
+//                && photo.equals(other.photo)
+//                && description.equals(other.description)
+//                && phone.equals(other.phone)
+////                && mail.equals(other.mail)
+//                && address.equals(other.address);
+//    }
 }
