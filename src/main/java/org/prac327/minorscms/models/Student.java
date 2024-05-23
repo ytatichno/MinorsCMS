@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Table(name = "students")
@@ -38,18 +37,4 @@ public class Student {
     List<Students2Courses> courses;
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Student other = (Student) o;
-        return Objects.equals(id, other.id)
-                && lastname.equals(other.lastname)
-                && name.equals(other.name)
-                && fathername.equals(other.fathername)
-//                && mail.equals(other.mail)
-                && phone.equals(other.phone)
-//                && Objects.equals(birthday, other.birthday)
-                && photo.equals(other.photo);
-    }
 }

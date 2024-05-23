@@ -7,7 +7,6 @@ import lombok.NonNull;
 import lombok.ToString;
 
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Table(name = "teachers")
@@ -48,19 +47,4 @@ public class Teacher {
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "teacher", fetch = FetchType.LAZY)
     List<Teachers2Courses> courses;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Teacher other = (Teacher) o;
-        return Objects.equals(id, other.id)
-                && lastname.equals(other.lastname)
-                && name.equals(other.name)
-                && fathername.equals(other.fathername)
-                && education.equals(other.education)
-                && mail.equals(other.mail)
-                && phone.equals(other.phone)
-                && Objects.equals(company_id, other.company_id)
-                && photo.equals(other.photo);
-    }
 }

@@ -1,10 +1,12 @@
 package org.prac327.minorscms.models;
 
-import lombok.*;
-
 import jakarta.persistence.*;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.ToString;
+
 import java.sql.Time;
-import java.util.Objects;
 
 @Entity
 @Table(name = "schedule")
@@ -37,16 +39,5 @@ public class Schedule  {
     @NonNull
     private String classroom;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Schedule other = (Schedule) o;
-        return Objects.equals(id, other.id)
-                && Objects.equals(teach_cour, other.teach_cour)
-//                && Objects.equals(date, other.date)
-                && Objects.equals(start_time, other.start_time)
-                && Objects.equals(end_time, other.end_time)
-                && classroom.equals(other.classroom);
-    }
+
 }

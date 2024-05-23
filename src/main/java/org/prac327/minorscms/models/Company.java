@@ -1,9 +1,9 @@
 package org.prac327.minorscms.models;
 
-import lombok.*;
-
 import jakarta.persistence.*;
-import java.util.Objects;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 @Entity
 @Table(name = "companies")
@@ -46,18 +46,4 @@ public class Company {
     }
 
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Company other = (Company) o;
-//        return Objects.equals(id, other.id)
-//                && name.equals(other.name)
-////                && short_name.equals(other.short_name)
-//                && photo.equals(other.photo)
-//                && description.equals(other.description)
-//                && phone.equals(other.phone)
-////                && mail.equals(other.mail)
-//                && address.equals(other.address);
-//    }
 }

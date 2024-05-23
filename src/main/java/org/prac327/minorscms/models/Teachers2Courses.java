@@ -6,8 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.ToString;
 
-import java.util.Objects;
-
 @Entity
 @Table(name = "teachers_courses",
         uniqueConstraints = {
@@ -35,13 +33,4 @@ public class Teachers2Courses {
     @NonNull
     private Teacher teacher;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Teachers2Courses other = (Teachers2Courses) o;
-        return Objects.equals(id, other.id);
-//                && Objects.equals(course_id, other.course_id)
-//                && Objects.equals(teacher_id, other.teacher_id);
-    }
 }
