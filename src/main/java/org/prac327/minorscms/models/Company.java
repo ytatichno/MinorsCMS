@@ -23,8 +23,6 @@ public class Company {
     @NonNull
     private String shortname;
 
-    @Column(name = "photo")
-    private String photo;
 
     @Column(nullable = false, name = "description")
     @NonNull

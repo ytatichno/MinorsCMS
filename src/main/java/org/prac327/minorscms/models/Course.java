@@ -28,8 +28,6 @@ public class Course {
     @NonNull
     private Company company;
 
-    @Column(name = "photo")
-    private String photo;
 
     @Column(nullable = false, name = "description")
     @NonNull
