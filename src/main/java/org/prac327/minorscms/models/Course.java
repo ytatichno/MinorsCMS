@@ -27,7 +27,7 @@ public class Course {
     @JoinColumn(name = "company_id")
     @ToString.Exclude
     @NonNull
-    private Company company_id;
+    private Company company;
 
     @Column(name = "photo")
     private String photo;
@@ -52,7 +52,7 @@ public class Course {
         Course other = (Course) o;
         return Objects.equals(id, other.id)
                 && name.equals(other.name)
-                && Objects.equals(company_id, other.company_id)
+                && Objects.equals(company, other.company)
                 && photo.equals(other.photo)
                 && description.equals(other.description)
                 && Objects.equals(plan, other.plan);

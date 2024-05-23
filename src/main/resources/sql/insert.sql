@@ -1,4 +1,4 @@
-insert into companies (address, description, name, phone, photo, short_name)
+insert into companies (address, description, name, phone, photo, shortname)
 values
     ('Санкт-Петербург, Невский пр-кт, 128', 'Крупный банк','Банк Санкт-Петербург', null, null, 'БСПб'),
     ('San Francisco, 5 avenue, 1', 'Large company, that produce lots of soft','Microsoft', null, null, 'MS'),
@@ -10,36 +10,36 @@ values
 insert into courses ( description, name, company_id)
 values
     ('Курс про то, как настраивать авторизацию, проверять пароли, хранить секретные данные',
-     'Безопасный Backend', (SELECT id FROM companies WHERE short_name='БСПб')),
+     'Безопасный Backend', (SELECT id FROM companies WHERE shortname='БСПб')),
     ('Про то, как собирать и анализировать данные, связанные с финансами',
-     'Финансовая аналитика', (SELECT id FROM companies WHERE short_name='БСПб')),
+     'Финансовая аналитика', (SELECT id FROM companies WHERE shortname='БСПб')),
 
     ('MS SQL is powerful and robust DBMS, in course you will be taught how to write effective queries',
-     'MS SQL', (SELECT id FROM companies WHERE short_name='MS')),
+     'MS SQL', (SELECT id FROM companies WHERE shortname='MS')),
     ('Short tour on Azure platform',
-     'Azure', (SELECT id FROM companies WHERE short_name='MS')),
+     'Azure', (SELECT id FROM companies WHERE shortname='MS')),
     ('By the end of the course you will write your own VSCode Extension',
-     'VSCode engineering', (SELECT id FROM companies WHERE short_name='MS')),
+     'VSCode engineering', (SELECT id FROM companies WHERE shortname='MS')),
     ('MS Word is powerful text editor. If you want to write your coursework, you can rely on MS Word',
-     'Coursework in Word', (SELECT id FROM companies WHERE short_name='MS')),
+     'Coursework in Word', (SELECT id FROM companies WHERE shortname='MS')),
 
     ('На этом спецкурсе разбираются темы, которые в основной курс не помещаются',
-     'Актуальные задачи современного ФА и МФ', (SELECT id FROM companies WHERE short_name='ВМК МГУ')),
+     'Актуальные задачи современного ФА и МФ', (SELECT id FROM companies WHERE shortname='ВМК МГУ')),
     ('Rust многие называют убийцей C++',
-     'Язык Rust', (SELECT id FROM companies WHERE short_name='ВМК МГУ'));
+     'Язык Rust', (SELECT id FROM companies WHERE shortname='ВМК МГУ'));
 
 
 insert into teachers (education, fathername, lastname, mail, name, company_id)
 values
-    ('ВМК МГУ', null, 'Петров', 'petrov@cs.msu.ru', 'Иван', (SELECT id FROM companies WHERE short_name = 'ВМК МГУ')),
-    ('ВМК МГУ', null, 'Капустин', 'cabbage@mail.ru', 'Николай', (SELECT id FROM companies WHERE short_name = 'ВМК МГУ')),
-    ('ВМК МГУ', null, 'Чернов', 'blackav@cs.msu.ru', 'Александр', (SELECT id FROM companies WHERE short_name = 'ВМК МГУ')),
+    ('ВМК МГУ', null, 'Петров', 'petrov@cs.msu.ru', 'Иван', (SELECT id FROM companies WHERE shortname = 'ВМК МГУ')),
+    ('ВМК МГУ', null, 'Капустин', 'cabbage@mail.ru', 'Николай', (SELECT id FROM companies WHERE shortname = 'ВМК МГУ')),
+    ('ВМК МГУ', null, 'Чернов', 'blackav@cs.msu.ru', 'Александр', (SELECT id FROM companies WHERE shortname = 'ВМК МГУ')),
 
-    ('БСПб', null, 'Денских', 'savaden@b.spb.ru', 'Савелий', (SELECT id FROM companies WHERE short_name = 'БСПб')),
+    ('БСПб', null, 'Денских', 'savaden@b.spb.ru', 'Савелий', (SELECT id FROM companies WHERE shortname = 'БСПб')),
 
-    ('MS', null, 'Colins', 'jcol@onenote.com', 'Jim', (SELECT id FROM companies WHERE short_name = 'MS')),
-    ('MS', null, 'Brown', 'tonybony@onenote.com', 'Tony', (SELECT id FROM companies WHERE short_name = 'MS')),
-    ('MS', null, 'Levinski', 'levinski.steve@onenote.com', 'Steve', (SELECT id FROM companies WHERE short_name = 'MS'));
+    ('MS', null, 'Colins', 'jcol@onenote.com', 'Jim', (SELECT id FROM companies WHERE shortname = 'MS')),
+    ('MS', null, 'Brown', 'tonybony@onenote.com', 'Tony', (SELECT id FROM companies WHERE shortname = 'MS')),
+    ('MS', null, 'Levinski', 'levinski.steve@onenote.com', 'Steve', (SELECT id FROM companies WHERE shortname = 'MS'));
 
 insert into teachers_courses ( course_id, teacher_id)
 values
