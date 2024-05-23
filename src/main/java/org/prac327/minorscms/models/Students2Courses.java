@@ -1,10 +1,7 @@
 package org.prac327.minorscms.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.ToString;
+import lombok.*;
 
 @Entity
 @Table(name = "students_courses",
@@ -12,7 +9,9 @@ import lombok.ToString;
                 @UniqueConstraint(columnNames = {"student_id", "course_id"})
         }
 )
-@Data
+@Getter
+@Setter
+//@ToString
 @NoArgsConstructor
 public class Students2Courses {
 
@@ -35,5 +34,8 @@ public class Students2Courses {
     @NonNull
     private Course course;
 
-
+    public Students2Courses(@NonNull Student student, @NonNull Course course) {
+        this.student = student;
+        this.course = course;
+    }
 }
