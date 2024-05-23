@@ -48,7 +48,7 @@ class ScheduleRepositoryTest {
         Teacher teacherStub = new Teacher();
         teacherStub.setName("te");
         teacherStub.setLastname("acher");
-        teacherStub.setCompany_id(companyStub);
+        teacherStub.setCompany(companyStub);
         teacherRepository.save(teacherStub);
 
         Course courseStub = new Course();

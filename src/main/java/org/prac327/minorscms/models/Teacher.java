@@ -43,10 +43,7 @@ public class Teacher {
     @JoinColumn(name = "company_id")
     @ToString.Exclude
     @NonNull
-    private Company company_id;
-
-    @Column(name = "photo")
-    private String photo;
+    private Company company;
 
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "teacher", fetch = FetchType.LAZY)
     List<Teachers2Courses> courses;
