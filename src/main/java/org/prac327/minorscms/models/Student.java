@@ -34,9 +34,6 @@ public class Student {
     private String phone;
 
 
-    @Column(name = "photo")
-    private String photo;
-
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "student", fetch = FetchType.LAZY)
     List<Students2Courses> courses;
 
