@@ -31,7 +31,13 @@ class CompanyRepositoryTest {
 
         Company savedCompany = companyRepository.save(company);
 
-        assertEquals(company, savedCompany);
+//        assertEquals(company, savedCompany);
+        assertEquals(company.getId(), savedCompany.getId());
+        assertEquals(company.getName(), savedCompany.getName());
+        assertEquals(company.getShortname(), savedCompany.getShortname());
+        assertEquals(company.getDescription(), savedCompany.getDescription());
+        assertEquals(company.getPhone(), savedCompany.getPhone());
+        assertEquals(company.getAddress(), savedCompany.getAddress());
     }
 
     @Test

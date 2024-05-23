@@ -42,6 +42,9 @@ class TeacherRepositoryTest {
         teacher.setLastname("Doe");
         teacher.setName("John");
         teacher.setFathername("James");
+        teacher.setMail("pochta@mail.ru");
+        teacher.setPhone("+78897878975");
+        teacher.setEducation("MIT");
         // ... (Set other fields as needed)
 
         // Save the teacher
@@ -49,7 +52,16 @@ class TeacherRepositoryTest {
 
         // Assert that the teacher is saved correctly
         assertNotNull(savedTeacher.getId());
-        assertEquals(teacher, savedTeacher);
+//        assertEquals(teacher, savedTeacher);
+        assertEquals(teacher.getId(),savedTeacher.getId());
+        assertEquals(teacher.getMail(),savedTeacher.getMail());
+        assertEquals(teacher.getLastname(),savedTeacher.getLastname());
+        assertEquals(teacher.getName(),savedTeacher.getName());
+        assertEquals(teacher.getCourses(),savedTeacher.getCourses());
+        assertEquals(teacher.getEducation(),savedTeacher.getEducation());
+        assertEquals(teacher.getPhone(),savedTeacher.getPhone());
+        assertEquals(teacher.getFathername(),savedTeacher.getFathername());
+        assertEquals(teacher.getCompany(),savedTeacher.getCompany());
     }
 
     @Test

@@ -113,7 +113,7 @@ class StudentRepositoryTest {
         assertTrue(deletedStudent.isEmpty());
     }
 
-    private static Student getStudent(String name, String lastname) {
+    static Student getStudent(String name, String lastname) {
         Student student = new Student();
         student.setName(name);
         student.setLastname(lastname);

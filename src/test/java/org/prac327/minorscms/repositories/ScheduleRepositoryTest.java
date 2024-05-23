@@ -88,7 +88,13 @@ class ScheduleRepositoryTest {
 
         // Assert that the schedule is saved correctly
         assertNotNull(savedSchedule.getId());
-        assertEquals(savedSchedule, schedule);
+//        assertEquals(savedSchedule, schedule);
+        assertEquals(schedule.getId(), savedSchedule.getId());
+        assertEquals(schedule.getDayOfWeek(), savedSchedule.getDayOfWeek());
+        assertEquals(schedule.getStart_time(), savedSchedule.getStart_time());
+        assertEquals(schedule.getEnd_time(), savedSchedule.getEnd_time());
+        assertEquals(schedule.getClassroom(), savedSchedule.getClassroom());
+        assertEquals(schedule.getTeach_cour(), savedSchedule.getTeach_cour());
     }
 
     @Test
@@ -110,6 +116,7 @@ class ScheduleRepositoryTest {
         // Assert that the list contains the expected schedules
         assertFalse(schedules.isEmpty());
         assertEquals(expected, schedules);
+
         // ... (Add specific assertions based on your test data)
     }
 

@@ -12,6 +12,7 @@ import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -41,7 +42,7 @@ class CourseRepositoryTest {
     Company company;
 
     // Helper method to create a Course with a Company (you might need to modify based on your setup)
-    private Course createCourse(String name, String photo, String description, String plan, Company company) {
+    private Course createCourse(String name, String description, String plan, Company company) {
         Course course = new Course();
         course.setName(name);
         course.setDescription(description);
@@ -59,14 +60,21 @@ class CourseRepositoryTest {
     @Test
     public void save_ShouldReturnSavedCourse() {
         // Given - Create a Company and Course
-        Course course = createCourse("Test Course", "course.jpg", "Test Description", "course-plan.pdf", company);
+        Course course = createCourse("Test Course", "Test Description", "course-plan.pdf", company);
 
         // When - Perform the action
         Course savedCourse = courseRepository.save(course);
 
         // Then - Verify the result
         assertNotNull(savedCourse.getId());
-        assertEquals(course, savedCourse);
+//        assertEquals(course, savedCourse);
+        assertEquals(course.getId(), savedCourse.getId());
+        assertEquals(course.getName(), savedCourse.getName());
+        assertEquals(course.getCompany(), savedCourse.getCompany());
+        assertEquals(course.getDescription(), savedCourse.getDescription());
+        assertEquals(course.getPlan(), savedCourse.getPlan());
+        assertEquals(course.getStudents(), savedCourse.getStudents());
+        assertEquals(course.getTeachers(), savedCourse.getTeachers());
     }
 
     @Test
@@ -74,10 +82,10 @@ class CourseRepositoryTest {
         // Given - Create some Courses (use @BeforeEach if needed)
         // ...
         List<Course> expected = List.of(
-                createCourse("Test course0", null, "very interesting", null, company),
-                createCourse("Test course1", null, "very interesting", null, company),
-                createCourse("Test course2", null, "very interesting", null, company),
-                createCourse("Test course3", null, "very interesting", null, company)
+                createCourse("Test course0", "very interesting", null, company),
+                createCourse("Test course1", "very interesting", null, company),
+                createCourse("Test course2", "very interesting", null, company),
+                createCourse("Test course3", "very interesting", null, company)
                 );
         courseRepository.saveAll(expected);
 
@@ -94,7 +102,7 @@ class CourseRepositoryTest {
     public void findById_ShouldReturnCorrectCourse() {
         // Given - Create a Course and save it
 
-        Course existingCourse = courseRepository.save(createCourse("Test Course", "course.jpg", "Test Description", "course-plan.pdf", company));
+        Course existingCourse = courseRepository.save(createCourse("Test Course", "Test Description", "course-plan.pdf", company));
         Long existingCourseId = existingCourse.getId();
 
         // When - Perform the action
@@ -121,7 +129,7 @@ class CourseRepositoryTest {
     @Test
     public void findByName_ShouldReturnCorrectCourse() {
         // Given - Create a Course and save it
-        Course existingCourse = courseRepository.save(createCourse("Test Course", "course.jpg", "Test Description", "course-plan.pdf", company));
+        Course existingCourse = courseRepository.save(createCourse("Test Course", "Test Description", "course-plan.pdf", company));
         String courseName = existingCourse.getName();
 
         // When - Perform the action
@@ -138,17 +146,17 @@ class CourseRepositoryTest {
         anotherCompany = companyRepository.save(anotherCompany);
 
         List<Course> expectedFromCompany = List.of(
-                createCourse("Test course0", null, "very interesting", null, company),
-                createCourse("Test course1", null, "very interesting", null, company),
-                createCourse("Test course2", null, "very interesting", null, company),
-                createCourse("Test course3", null, "very interesting", null, company)
+                createCourse("Test course0", "very interesting", null, company),
+                createCourse("Test course1", "very interesting", null, company),
+                createCourse("Test course2", "very interesting", null, company),
+                createCourse("Test course3", "very interesting", null, company)
                 );
         courseRepository.saveAll(expectedFromCompany);
 
         List<Course> expectedFromAnotherCompany = List.of(
-                createCourse("Another Test course0", null, "very very interesting", null, anotherCompany),
-                createCourse("Another Test course1", null, "very very interesting", null, anotherCompany),
-                createCourse("Another Test course2", null, "very very interesting", null, anotherCompany)
+                createCourse("Another Test course0", "very very interesting", null, anotherCompany),
+                createCourse("Another Test course1", "very very interesting", null, anotherCompany),
+                createCourse("Another Test course2", "very very interesting", null, anotherCompany)
                 );
         courseRepository.saveAll(expectedFromAnotherCompany);
 
@@ -162,8 +170,8 @@ class CourseRepositoryTest {
     @Test
     public void findStudentsByCourse_ShouldReturnAllStudentsOfCourse(){
         List<Course> courses = List.of(
-                createCourse("Test course0", null, "very interesting", null, company),
-                createCourse("Test course1", null, "very interesting", null, company)
+                createCourse("Test course0", "very interesting", null, company),
+                createCourse("Test course1", "very interesting", null, company)
         );
         courseRepository.saveAll(courses);
         List<Student> students = List.of(
@@ -188,11 +196,11 @@ class CourseRepositoryTest {
         });
 
         assertEquals(
-                students.stream().collect(Collectors.toSet()),
+                new HashSet<>(students),
                 courses.get(0).getStudents().stream().map(Students2Courses::getStudent).collect(Collectors.toSet())
         );
         assertEquals(
-                students.subList(2,4).stream().collect(Collectors.toSet()),
+                new HashSet<>(students.subList(2, 4)),
                 courses.get(1).getStudents().stream().map(Students2Courses::getStudent).collect(Collectors.toSet())
         );
 
@@ -202,7 +210,7 @@ class CourseRepositoryTest {
     public void deleteById_ShouldDeleteCorrectCourse() {
         // Given - Create a Course and save it
 
-        Course existingCourse = courseRepository.save(createCourse("Test Course", "course.jpg", "Test Description", "course-plan.pdf", company));
+        Course existingCourse = courseRepository.save(createCourse("Test Course", "Test Description", "course-plan.pdf", company));
         Long existingCourseId = existingCourse.getId();
 
         // When - Perform the action
