@@ -1,9 +1,12 @@
 package org.prac327.minorscms.repositories;
 
+import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.prac327.minorscms.models.Company;
 import org.prac327.minorscms.models.Course;
+import org.prac327.minorscms.models.Student;
+import org.prac327.minorscms.models.Students2Courses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.jdbc.EmbeddedDatabaseConnection;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -11,8 +14,10 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.prac327.minorscms.repositories.StudentRepositoryTest.getStudent;
 
 /**
  * Created by ytati
@@ -27,13 +32,18 @@ class CourseRepositoryTest {
     @Autowired
     private CompanyRepository companyRepository; // Assuming you have a CompanyRepository
 
+    @Autowired
+    private StudentRepository studentRepository;
+
+    @Autowired
+    EntityManager entityManager;
+
     Company company;
 
     // Helper method to create a Course with a Company (you might need to modify based on your setup)
     private Course createCourse(String name, String photo, String description, String plan, Company company) {
         Course course = new Course();
         course.setName(name);
-        course.setPhoto(photo);
         course.setDescription(description);
         course.setPlan(plan);
         course.setCompany(company);
@@ -147,6 +157,45 @@ class CourseRepositoryTest {
 
         assertEquals(expectedFromCompany, actualFromCompany);
         assertEquals(expectedFromAnotherCompany, actualFromAnotherCompany);
+    }
+
+    @Test
+    public void findStudentsByCourse_ShouldReturnAllStudentsOfCourse(){
+        List<Course> courses = List.of(
+                createCourse("Test course0", null, "very interesting", null, company),
+                createCourse("Test course1", null, "very interesting", null, company)
+        );
+        courseRepository.saveAll(courses);
+        List<Student> students = List.of(
+                getStudent("Ivan", "Petrov"),
+                getStudent("Ivan", "Sidorov"),
+                getStudent("Ivan", "Romanov"),
+                getStudent("Vladimir", "Romanov")
+        );
+        studentRepository.saveAll(students);
+        List<Students2Courses> pairs = List.of(
+                new Students2Courses(students.get(0),courses.get(0)),
+                new Students2Courses(students.get(1),courses.get(0)),
+                new Students2Courses(students.get(2),courses.get(0)),
+                new Students2Courses(students.get(3),courses.get(0)),
+                new Students2Courses(students.get(2),courses.get(1)),
+                new Students2Courses(students.get(3),courses.get(1))
+        );
+        pairs.forEach(p->{
+            entityManager.persist(p);
+            entityManager.refresh(p.getCourse());
+            entityManager.refresh(p.getStudent());
+        });
+
+        assertEquals(
+                students.stream().collect(Collectors.toSet()),
+                courses.get(0).getStudents().stream().map(Students2Courses::getStudent).collect(Collectors.toSet())
+        );
+        assertEquals(
+                students.subList(2,4).stream().collect(Collectors.toSet()),
+                courses.get(1).getStudents().stream().map(Students2Courses::getStudent).collect(Collectors.toSet())
+        );
+
     }
 
     @Test
