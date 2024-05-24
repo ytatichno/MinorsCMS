@@ -187,6 +187,65 @@ class ScheduleRepositoryTest {
     }
 
     @Test
+    void findByCourse_ShouldReturnAllSchedulesForCourse(){
+
+        Teacher teacher1 = new Teacher();
+        teacher1.setName("teee");
+        teacher1.setLastname("aaaacher");
+        teacher1.setCompany(companyRepository.findAll().get(0));
+        teacherRepository.save(teacher1);
+
+        Teacher teacher2 = new Teacher();
+        teacher2.setName("ano");
+        teacher2.setLastname("ther");
+        teacher2.setCompany(companyRepository.findAll().get(0));
+        teacherRepository.save(teacher2);
+
+        Course course1 = new Course();
+        course1.setName("best course 1");
+        course1.setCompany(companyRepository.findAll().get(0));
+        course1.setDescription("very interesting");
+        courseRepository.save(course1);
+
+        Course course2 = new Course();
+        course2.setName("best course 2");
+        course2.setCompany(companyRepository.findAll().get(0));
+        course2.setDescription("very interesting");
+        courseRepository.save(course2);
+
+        Teachers2Courses tc1 = new Teachers2Courses();
+        tc1.setCourse(course1);
+        tc1.setTeacher(teacher1);
+
+        Teachers2Courses tc2 = new Teachers2Courses();
+        tc2.setCourse(course2);
+        tc2.setTeacher(teacher1);
+
+        Teachers2Courses tc3 = new Teachers2Courses();
+        tc3.setCourse(course2);
+        tc3.setTeacher(teacher2);
+
+        entityManager.persist(tc1);
+        entityManager.persist(tc2);
+        entityManager.persist(tc3);
+
+        List<Schedule> expected = List.of(
+                createSchedule(tc1, "001", "Monday", Time.valueOf("8:45:0"), Time.valueOf("10:20:0") ),
+                createSchedule(tc1, "001", "Monday", Time.valueOf("10:30:0"), Time.valueOf("12:05:0") ),
+                createSchedule(tc2, "001", "Wednesday", Time.valueOf("14:45:0"), Time.valueOf("16:30:0") ),
+                createSchedule(tc2, "002", "Monday", Time.valueOf("8:45:0"), Time.valueOf("10:20:0") ),
+                createSchedule(tc3, "P14", "Tuesday", Time.valueOf("10:30:0"), Time.valueOf("12:0:0") )
+        );
+        scheduleRepository.saveAll(expected);
+
+        List<Schedule> result1 = scheduleRepository.findByCourse(course1);
+        List<Schedule> result2 = scheduleRepository.findByCourse(course2);
+
+        assertEquals(expected.subList(0,2), result1);
+        assertEquals(expected.subList(2,5), result2);
+    }
+
+    @Test
     void deleteScheduleById() {
         // Create a sample schedule and save it
         Schedule schedule = createSchedule(tcStub, "001", "Monday", Time.valueOf("8:45:0"), Time.valueOf("10:20:0") );
