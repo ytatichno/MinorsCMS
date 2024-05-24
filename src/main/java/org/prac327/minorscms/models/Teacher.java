@@ -39,7 +39,7 @@ public class Teacher {
     private String phone;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "company_id")
+    @JoinColumn(name = "company")
     @ToString.Exclude
     @NonNull
     private Company company;

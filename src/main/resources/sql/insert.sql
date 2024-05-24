@@ -7,7 +7,7 @@ values
     ('Москва, Ленинский горы, 12к1', 'Факультет МГУ','Факультет Вычислистельной математики и кибернетики Московского государственного университета им. Ломоносова', null, 'ВМК МГУ');
 
 
-insert into courses ( description, name, company_id)
+insert into courses ( description, name, company)
 values
     ('Курс про то, как настраивать авторизацию, проверять пароли, хранить секретные данные',
      'Безопасный Backend', (SELECT id FROM companies WHERE shortname='БСПб')),
@@ -29,7 +29,7 @@ values
      'Язык Rust', (SELECT id FROM companies WHERE shortname='ВМК МГУ'));
 
 
-insert into teachers (education, fathername, lastname, mail, name, company_id)
+insert into teachers (education, fathername, lastname, mail, name, company)
 values
     ('ВМК МГУ', null, 'Петров', 'petrov@cs.msu.ru', 'Иван', (SELECT id FROM companies WHERE shortname = 'ВМК МГУ')),
     ('ВМК МГУ', null, 'Капустин', 'cabbage@mail.ru', 'Николай', (SELECT id FROM companies WHERE shortname = 'ВМК МГУ')),
