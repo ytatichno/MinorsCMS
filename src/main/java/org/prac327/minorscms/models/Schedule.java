@@ -39,5 +39,10 @@ public class Schedule  {
     @NonNull
     private String classroom;
 
+//    @SuppressWarnings
+    public String getInterval(){
+        return "(" + start_time.getHours() + ":" + start_time.getMinutes() + " - " + end_time.getHours() + ":" + end_time.getMinutes() + ")";
+    }
+
 
 }
