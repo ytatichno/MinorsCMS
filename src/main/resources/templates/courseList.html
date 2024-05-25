@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Course List</title>
+<!--    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.2/examples/sign-in/signin.css" crossorigin="anonymous"/>-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" th:href="@{/styles/common.css}" />
+
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">Список курсов</h1>
+    <div class=" ">
+        <div class="table-header">
+            <div class="row">
+                <div class="col col-id">ID</div>
+                <div class="col-4">Название</div>
+                <div class="col">Компания</div>
+                <div class="col-3">Преподаватели</div>
+                <div class="col-2">Расписание</div>
+            </div>
+        </div>
+        <div class="table-body stripped">
+        <a class="row row-href" th:each="course, iter : ${courses}" th:href="@{/course/{courseId}(courseId=${course.id})}">
+            <div class="col col-id" th:text="${course.id}"></div>
+            <div class="col-4" >
+                <span th:text="${course.name}"></span>
+<!--                <span th:text="${course.name}"></span>-->
+                <span class="tooltip-custom ">
+                    <span class="i-tip"> i </span>
+                    <span class="tooltiptext-custom tooltip-bottom"
+                          th:text="${course.description}"
+                    > </span>
+                </span>
+            </div>
+            <div class="col" >
+                <div class="tooltip-custom" >
+                    <span th:text="${course.company.shortname}"></span>
+                    <span class="tooltiptext-custom tooltip-bottom"
+                          th:text="${course.company.name}"
+                    > </span>
+                </div>
+            </div>
+            <div class="col-3">
+                <span th:if="${course.teachers}" th:each="tc : ${course.teachers}"
+                      th:text="${tc.teacher.lastname}
+                                 + ${tc.teacher.id == course.teachers[course.teachers.size()-1].teacher.id ? ';' : ', '}">
+                </span>
+            </div>
+            <div class="col-2">
+                <div class="tooltip-custom">
+                    <span th:each="schedule : ${schedules.get(iter.index)}" th:text="${schedule.dayOfWeek} + ' '"></span>
+                    <div class="tooltiptext-custom tooltip-bottom" >
+                        <ul class="tooltip-list">
+                            <li th:each="schedule : ${schedules.get(iter.index)}"
+                                th:text="${schedule.dayOfWeek}
+                                         + ': ' + ${schedule.classroom}
+                                         + ${schedule.getInterval()}"
+                            >
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+<!--                <div class="tooltip-custom">Bottom-->
+<!--                    <span class="tooltiptext-custom tooltip-bottom">Tooltip text</span>-->
+<!--                </div>-->
+            </div>
+<!--            <div>-->
+<!--                <a th:href="@{/course/{courseId}(courseId=${course.id})}" class="btn btn-primary">View Course</a>-->
+<!--            </div>-->
+        </a>
+        </div>
+    </div>
+</div>
+
+<!--<script>-->
+<!--    $(document).ready(function () {-->
+<!--        $('[data-toggle="tooltip"]').tooltip();-->
+<!--    });-->
+<!--</script>-->
+</body>
+</html>

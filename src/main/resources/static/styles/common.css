@@ -1,0 +1,87 @@
+.table-header>*{
+    background-color: lightsteelblue;
+    border-top: black solid 2px;
+}
+.row>*{
+    border-bottom: black solid 2px;
+    border-right: black solid 2px;
+
+}
+.col-id{
+    max-width: 10%;
+    width: 1rem;
+    min-width: 40px;
+    border-left: black solid 2px;
+}
+.row-href{
+    text-decoration: black;
+    color: black;
+    min-height: 32px;
+}
+.row-href:hover{
+    background-color: lightgray;
+}
+
+/* Tooltip container */
+.tooltip-custom {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip-custom .tooltiptext-custom {
+    visibility: hidden;
+    width: 120px;
+    background-color: lightsteelblue;
+    /*color: b;*/
+    /*color: black;*/
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip-custom:hover .tooltiptext-custom {
+    visibility: visible;
+}
+
+.tooltip-custom .tooltiptext-custom {
+    /*width: 160px;*/
+    width: 16rem;
+    top: 100%;
+    left: 30%;
+    /*margin-left: -60px; !* Use half of the width (120/2 = 60), to center the tooltip *!*/
+    margin-left: -8rem; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+/* Arrow */
+.tooltip-custom .tooltiptext-custom::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent lightsteelblue transparent;
+}
+
+.tooltip-list{
+    padding-left: 24px;
+    text-align: left;
+    font: 0.85rem "Times New Roman";
+    color: black;
+}
+
+.i-tip{
+    color: deepskyblue;
+    font: italic 1.2rem "Times New Roman";
+}
+/*.i-tip > *{*/
+/*    all: initial;*/
+/*    !*font: italic 1rem "Times New Roman";*!*/
+/*}*/
