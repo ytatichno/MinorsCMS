@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-    <h1>Описани курса</h1>
+    <h1>Описание курса</h1>
     <div class="table-header">
         <div class="row">
             <div class="col col-id">Название:</div>
@@ -117,7 +117,8 @@
             </div>
         </div>
         <div class="row" th:each="t2c : ${course.teachers}">
-            <div class="col col-id" th:text="${t2c.teacher.id}"></div>
+            <a class="col col-id" th:text="${t2c.teacher.id}"
+                                  th:href="'/teacher/' + ${t2c.teacher.id}"></a>
             <div class="col" th:text="${t2c.teacher.lastname}"></div>
             <div class="col" th:text="${t2c.teacher.name}"></div>
             <div class="col" th:text="${t2c.teacher.fathername}"></div>
