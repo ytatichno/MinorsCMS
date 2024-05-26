@@ -64,8 +64,8 @@
                 <div class="col">Фамилия</div>
                 <div class="col">Имя</div>
                 <div class="col">Отчество</div>
-                <div class="col">Почта</div>
-                <div class="col">Телефон</div>
+                <div class="col-3">Почта</div>
+                <div class="col-2">Телефон</div>
             </div>
         </div>
         <div class="row" th:each="teacher : ${teachers}">
@@ -74,8 +74,8 @@
             <div class="col" th:text="${teacher.lastname}"></div>
             <div class="col" th:text="${teacher.name}"></div>
             <div class="col" th:text="${teacher.fathername}"></div>
-            <div class="col" th:text="${teacher.mail}"></div>
-            <div class="col" th:text="${teacher.phone}"></div>
+            <div class="col-3" th:text="${teacher.mail}"></div>
+            <div class="col-2" th:text="${teacher.phone}"></div>
         </div>
     </div>
     <hr/>
