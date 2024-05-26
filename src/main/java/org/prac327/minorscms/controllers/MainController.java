@@ -145,6 +145,16 @@ public class MainController {
 
         return "redirect:/teacher/" + teacher.getId();
     }
+    @GetMapping("/register/student")
+    public String registerStudentView(Model model){
+        return "/registerStudent";
+    }
+    @PostMapping("/register/student")
+    public String registerTeacher(Student student, Model model){
+        studentRepository.save(student);
+
+        return "redirect:/student/" + student.getId();
+    }
 
 
 
