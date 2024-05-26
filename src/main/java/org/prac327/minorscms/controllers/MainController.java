@@ -101,6 +101,13 @@ public class MainController {
         return "courseList";
     }
 
+    @GetMapping("/teacher/{id}")
+    public String getTeacher(@PathVariable("id") Long id, Model model){
+        Teacher teacher = teacherRepository.findById(id).orElseThrow();
+        model.addAttribute("teacher", teacher);
+        return "/teacher";
+    }
+
 
 
 
