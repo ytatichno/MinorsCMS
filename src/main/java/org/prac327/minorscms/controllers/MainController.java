@@ -2,10 +2,7 @@ package org.prac327.minorscms.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.prac327.minorscms.api.Utils;
-import org.prac327.minorscms.models.Company;
-import org.prac327.minorscms.models.Course;
-import org.prac327.minorscms.models.Schedule;
-import org.prac327.minorscms.models.Teacher;
+import org.prac327.minorscms.models.*;
 import org.prac327.minorscms.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -106,6 +103,12 @@ public class MainController {
         Teacher teacher = teacherRepository.findById(id).orElseThrow();
         model.addAttribute("teacher", teacher);
         return "/teacher";
+    }
+    @GetMapping("/student/{id}")
+    public String getStudent(@PathVariable("id") Long id, Model model){
+        Student student = studentRepository.findById(id).orElseThrow();
+        model.addAttribute("student", student);
+        return "/student";
     }
 
 
