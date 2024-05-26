@@ -13,41 +13,29 @@
 </head>
 <body>
 <div class="container">
-  <h1 th:text="'Карточка преподавателя ' + ${teacher.id}"></h1>
+  <h1 th:text="'Карточка студента ' + ${student.id}"></h1>
   <div class="table-header">
     <div class="row">
       <div class="col col-id">Фамилия:</div>
-      <div class="col text-bold" th:text="${teacher.lastname}">-</div>
+      <div class="col text-bold" th:text="${student.lastname}">-</div>
     </div>
   </div>
   <div class="row">
     <div class="col col-id">Имя:</div>
-    <div class="col" th:text="${teacher.name}">-</div>
+    <div class="col" th:text="${student.name}">-</div>
   </div>
   <div class="row">
     <div class="col col-id">Отчество:</div>
-    <div class="col" th:text="${teacher.fathername}">-</div>
+    <div class="col" th:text="${student.fathername}">-</div>
   </div>
   <div class="row">
     <div class="col col-id">Телефон:</div>
-    <div class="col" th:text="${teacher.phone}">-</div>
+    <div class="col" th:text="${student.phone}">-</div>
   </div>
-  <div class="row">
-    <div class="col col-id">Почта:</div>
-    <div class="col" th:text="${teacher.mail}">-</div>
-  </div>
-  <div class="row">
-    <div class="col col-id">Компания:</div>
-    <div class="col" th:text="${teacher.company.name}">-</div>
-  </div>
-  <div class="row">
-    <div class="col col-id">Образовние:</div>
-    <div class="col" th:text="${teacher.education}">-</div>
-  </div>
-  <hr th:if="${teacher.courses}"/>
+  <hr th:if="${student.courses}"/>
 
-  <div th:if="${teacher.courses}" class="">
-    <h3 th:text="'Курсы(' + ${teacher.courses.size()} +'): '"></h3>
+  <div th:if="${student.courses}" class="">
+    <h3 th:text="'Курсы(' + ${student.courses.size()} +'): '"></h3>
     <div class=" ">
       <div class="table-header">
         <div class="row">
@@ -57,10 +45,10 @@
         </div>
       </div>
       <div class="table-body ">
-        <a class="row row-href" th:each="t2c, iter : ${teacher.courses}" th:href="@{/course/{courseId}(courseId=${t2c.course.id})}">
-          <div class="col col-id" th:text="${t2c.course.id}"> </div>
-          <div class="col-4" th:text="${t2c.course.name}"> </div>
-          <div class="col" th:text="${t2c.course.description}"> </div>
+        <a class="row row-href" th:each="s2c, iter : ${student.courses}" th:href="@{/course/{courseId}(courseId=${s2c.course.id})}">
+          <div class="col col-id" th:text="${s2c.course.id}"> </div>
+          <div class="col-4" th:text="${s2c.course.name}"> </div>
+          <div class="col" th:text="${s2c.course.description}"> </div>
         </a>
       </div>
 
