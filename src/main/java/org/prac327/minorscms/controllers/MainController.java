@@ -2,12 +2,11 @@ package org.prac327.minorscms.controllers;
 
 import lombok.extern.slf4j.Slf4j;
 import org.prac327.minorscms.api.Utils;
+import org.prac327.minorscms.models.Company;
 import org.prac327.minorscms.models.Course;
 import org.prac327.minorscms.models.Schedule;
-import org.prac327.minorscms.repositories.CompanyRepository;
-import org.prac327.minorscms.repositories.CourseRepository;
-import org.prac327.minorscms.repositories.ScheduleRepository;
-import org.prac327.minorscms.repositories.StudentRepository;
+import org.prac327.minorscms.models.Teacher;
+import org.prac327.minorscms.repositories.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -35,6 +34,8 @@ public class MainController {
     CourseRepository courseRepository;
     @Autowired
     CompanyRepository companyRepository;
+    @Autowired
+    TeacherRepository teacherRepository;
 
     @GetMapping("/course/{id}")
     public String getCourse(@PathVariable("id") Long id, Model model){
@@ -42,6 +43,16 @@ public class MainController {
         model.addAttribute("course", course);
         Utils.splitSchedulesToModel(scheduleRepository.findByCourse(course), model);
         return "/course";
+    }
+
+    @GetMapping("/company/{id}")
+    public String getCompany(@PathVariable("id") Long id, Model model){
+        Company company = companyRepository.findById(id).orElseThrow();
+        model.addAttribute("company", company);
+        model.addAttribute("courses", courseRepository.findCourseByCompanyId(company.getId()));
+        List<Teacher> teachers = teacherRepository.findByCompanyShortname(company.getShortname());
+        model.addAttribute("teachers", teachers);
+        return "/company";
     }
 
     @GetMapping("/courses")
