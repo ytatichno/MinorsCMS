@@ -104,12 +104,27 @@ public class MainController {
         model.addAttribute("teacher", teacher);
         return "/teacher";
     }
+    @GetMapping("/teachers")
+    public String getTeachers(Model model) {
+        List<Teacher> teachers = teacherRepository.findAll();
+        model.addAttribute("teachers", teachers);
+        return "/teacherList";
+    }
     @GetMapping("/student/{id}")
     public String getStudent(@PathVariable("id") Long id, Model model){
         Student student = studentRepository.findById(id).orElseThrow();
         model.addAttribute("student", student);
         return "/student";
     }
+
+    @GetMapping("/students")
+    public String getStudents(Model model){
+        List<Student> students = studentRepository.findAll();
+        model.addAttribute("students", students);
+        return "/studentList";
+    }
+
+
 
 
 
