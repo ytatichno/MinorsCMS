@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher</title>
+    <!--    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.2/examples/sign-in/signin.css" crossorigin="anonymous"/>-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" th:href="@{/styles/common.css}"/>
+
+</head>
+<body>
+<div class="container">
+    <h1 >Регистрация нового преподавателя</h1>
+    <form th:action="@{/register/teacher}" method="POST">
+        <div class="table-header">
+            <div class="row">
+                <div class="col col-id">Фамилия:</div>
+                <div class="col col-form-control"><input type="text" name="lastname"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-id">Имя:</div>
+            <div class="col col-form-control"><input type="text" name="name"></div>
+        </div>
+        <div class="row">
+            <div class="col col-id">Отчество:</div>
+            <div class="col col-form-control"><input type="text" name="fathername"></div>
+        </div>
+        <div class="row">
+            <div class="col col-id">Окончил:</div>
+            <div class="col col-form-control"><input type="text" name="education"></div>
+        </div>
+        <div class="row">
+            <div class="col col-id">Почта:</div>
+            <div class="col col-form-control"><input type="email" name="mail"></div>
+        </div>
+        <div class="row">
+            <div class="col col-id">Телефон:</div>
+            <div class="col col-form-control"><input type="tel" name="phone"></div>
+        </div>
+        <button class="btn btn-primary mt-3" type="submit">Сохранить</button>
+    </form>
+</div>
+</body>
+</html>
