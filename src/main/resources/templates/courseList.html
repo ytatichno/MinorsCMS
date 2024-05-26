@@ -23,7 +23,7 @@
                 <div class="col-2">Расписание</div>
             </div>
         </div>
-        <div class="table-body stripped">
+        <div class="table-body ">
         <a class="row row-href" th:each="course, iter : ${courses}" th:href="@{/course/{courseId}(courseId=${course.id})}">
             <div class="col col-id" th:text="${course.id}"></div>
             <div class="col-4" >
