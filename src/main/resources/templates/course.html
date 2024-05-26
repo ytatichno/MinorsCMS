@@ -38,6 +38,73 @@
     </div>
     <hr/>
     <div class="">
+        <h3>Расписание:</h3>
+        <div class="table-header">
+            <div class="row">
+                <div class="col col-id">День недели</div>
+                <div class="col">Понедельник</div>
+                <div class="col">Вторник</div>
+                <div class="col">Среда</div>
+                <div class="col">Четверг</div>
+                <div class="col">Пятница</div>
+                <div class="col">Суббота</div>
+<!--                <div class="col">Воскресен</div>-->
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col col-id" >Расписание</div>
+            <div class="col">
+                <div th:each="schedule : ${Понедельник}"
+                    th:text="${schedule.teach_cour.teacher.lastname}
+                                         + ': ' + ${schedule.classroom}
+                                         + ${schedule.getInterval()}"
+                >
+                </div>
+            </div>
+            <div class="col">
+                <div th:each="schedule : ${Вторник}"
+                    th:text="${schedule.teach_cour.teacher.lastname}
+                                         + ': ' + ${schedule.classroom}
+                                         + ${schedule.getInterval()}"
+                >
+                </div>
+            </div>
+            <div class="col">
+                <div th:each="schedule : ${Среда}"
+                    th:text="${schedule.teach_cour.teacher.lastname}
+                                         + ': ' + ${schedule.classroom}
+                                         + ${schedule.getInterval()}"
+                >
+                </div>
+            </div>
+            <div class="col">
+                <div th:each="schedule : ${Четверг}"
+                    th:text="${schedule.teach_cour.teacher.lastname}
+                                         + ': ' + ${schedule.classroom}
+                                         + ${schedule.getInterval()}"
+                >
+                </div>
+            </div>
+            <div class="col">
+                <div th:each="schedule : ${Пятница}"
+                    th:text="${schedule.teach_cour.teacher.lastname}
+                                         + ': ' + ${schedule.classroom}
+                                         + ${schedule.getInterval()}"
+                >
+                </div>
+            </div>
+            <div class="col">
+                <div th:each="schedule : ${Суббота}"
+                    th:text="${schedule.teach_cour.teacher.lastname}
+                                         + ': ' + ${schedule.classroom}
+                                         + ${schedule.getInterval()}"
+                >
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="">
         <h3>Преподаватели:</h3>
         <div class="table-header">
             <div class="row">
