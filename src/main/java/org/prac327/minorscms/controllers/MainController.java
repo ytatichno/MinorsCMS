@@ -1,6 +1,7 @@
 package org.prac327.minorscms.controllers;
 
 import lombok.extern.slf4j.Slf4j;
+import org.prac327.minorscms.api.Utils;
 import org.prac327.minorscms.models.Course;
 import org.prac327.minorscms.models.Schedule;
 import org.prac327.minorscms.repositories.CompanyRepository;
@@ -39,6 +40,7 @@ public class MainController {
     public String getCourse(@PathVariable("id") Long id, Model model){
         Course course = courseRepository.findById(id).orElseThrow();
         model.addAttribute("course", course);
+        Utils.splitSchedulesToModel(scheduleRepository.findByCourse(course), model);
         return "/course";
     }
 
