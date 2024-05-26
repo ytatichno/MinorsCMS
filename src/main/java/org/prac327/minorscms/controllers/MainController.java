@@ -55,6 +55,17 @@ public class MainController {
         return "/company";
     }
 
+    @GetMapping("/companies")
+    public String getCompanies(Model model){
+        List<Company> companies = companyRepository.findAll();
+        model.addAttribute("companies", companies);
+        List<Integer> courseCount = new ArrayList<>(companies.size());
+        companies.forEach(c->courseCount.add(courseRepository.countCoursesByCompanyId(c.getId())));
+        model.addAttribute("courseCount", courseCount);
+        return "/companyList";
+
+    }
+
     @GetMapping("/courses")
     public String getCourses(Model model) throws InterruptedException {
         List<Course> courses = courseRepository.findAll();
