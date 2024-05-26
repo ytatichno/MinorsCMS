@@ -36,5 +36,9 @@ public class Student {
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "student", fetch = FetchType.LAZY)
     List<Students2Courses> courses;
 
-
+    public String getInitials(){
+        return lastname + "  "
+                + name.charAt(0) + ". "
+                + (fathername != null ? fathername.charAt(0) + "." : "");
+    }
 }
