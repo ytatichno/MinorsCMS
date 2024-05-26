@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,13 @@ public class MainController {
     CourseRepository courseRepository;
     @Autowired
     CompanyRepository companyRepository;
+
+    @GetMapping("/course/{id}")
+    public String getCourse(@PathVariable("id") Long id, Model model){
+        Course course = courseRepository.findById(id).orElseThrow();
+        model.addAttribute("course", course);
+        return "/course";
+    }
 
     @GetMapping("/courses")
     public String getCourses(Model model) throws InterruptedException {
@@ -68,6 +76,8 @@ public class MainController {
         log.warn(syncSchedules.toString());
         return "courseList";
     }
+
+
 
 
 
