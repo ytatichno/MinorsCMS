@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -124,49 +125,23 @@ public class MainController {
         return "/studentList";
     }
 
+    @GetMapping("/register/company")
+    public String registerCompanyView(Model model){
+        return "/registerCompany";
+    }
+    @PostMapping("/register/company")
+    public String registerCompany(Company company, Model model){
+        companyRepository.save(company);
+
+        return "redirect:/company/" + company.getId();
+    }
 
 
 
 
-
-
-//    @Autowired
-//    Students2CoursesRepository students2CoursesRepository;
-
-    //    @GetMapping("/test")
-//    public String test(){
-//        Student student = new Student();
-//        student.setLastname("lastName");
-//        student.setName("name");
-//        Student savedStudent = studentRepository.save(student);
-//        log.warn(savedStudent.toString());
-//        return "/test";
-//    }
-//    @GetMapping("/test")
-//    public String test(){
-//        Student student = new Student();
-//        student.setLastname("lastName");
-//        student.setName("name");
-//        Student savedStudent = studentRepository.save(student);
-//        log.warn(savedStudent.toString());
-//        return "/test";
-//    }
     @GetMapping("/test")
     public String test() {
 
-//        log.warn(companyRepository.findByShortname("MS").toString());
-//        Student student = studentRepository.findByLastname("Дударенко").orElseThrow();
-////        Course course = courseRepository.findByName("Azure").orElseThrow();
-//        log.warn(student.toString());
-////        log.warn(student.getCourses().toString());
-//        Course course = student.getCourses().get(0).getCourse();
-//        log.warn(course.getTeachers().toString());
-//        log.warn(course.getTeachers().get(0).getTeacher().toString());
-//        log.warn;
-//        Students2Courses pair = students2CoursesRepository
-//                .findById(new StudentCourseId(student.getId(), course.getId()))
-//                .orElseThrow();
-//        log.warn(pair.toString());
         return "/test";
     }
 }
