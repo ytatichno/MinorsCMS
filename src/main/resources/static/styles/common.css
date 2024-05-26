@@ -85,6 +85,21 @@
 .text-bold{
     font-weight: bold;
 }
+
+.btn-list-add{
+    position: absolute;
+    right: 10%;
+    top: 6%;
+
+}
+
+.col-form-control{
+    padding: 0;
+}
+.col-form-control > input, textarea{
+    width: 100%;
+    height: 100%;
+}
 /*.i-tip > *{*/
 /*    all: initial;*/
 /*    !*font: italic 1rem "Times New Roman";*!*/
