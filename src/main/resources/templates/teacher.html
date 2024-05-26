@@ -38,7 +38,10 @@
   </div>
   <div class="row">
     <div class="col col-id">Компания:</div>
-    <div class="col" th:text="${teacher.company.name}">-</div>
+    <div class="col">
+      <div th:if="${teacher.company}" th:text="${teacher.company.name}">-</div>
+    </div>
+
   </div>
   <div class="row">
     <div class="col col-id">Образовние:</div>

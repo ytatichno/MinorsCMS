@@ -30,7 +30,7 @@
         <div class="col col-id" th:text="${teacher.id}"></div>
         <div class="col-2" >
           <span th:text="${teacher.lastname}"></span>
-          <span class="tooltip-custom ">
+          <span th:if="${teacher.company}" class="tooltip-custom ">
                     <span class="i-tip"> i </span>
                     <span class="tooltiptext-custom tooltip-bottom"
                           th:text="${teacher.company.shortname}"
