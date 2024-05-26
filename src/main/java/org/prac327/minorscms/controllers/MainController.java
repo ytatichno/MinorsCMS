@@ -135,6 +135,16 @@ public class MainController {
 
         return "redirect:/company/" + company.getId();
     }
+    @GetMapping("/register/teacher")
+    public String registerTeacherView(Model model){
+        return "/registerTeacher";
+    }
+    @PostMapping("/register/teacher")
+    public String registerTeacher(Teacher teacher, Model model){
+        teacherRepository.save(teacher);
+
+        return "redirect:/teacher/" + teacher.getId();
+    }
 
 
 
