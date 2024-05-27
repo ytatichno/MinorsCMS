@@ -41,7 +41,10 @@
     </div>
     <hr/>
     <div class="">
-        <h3>Расписание:</h3>
+        <div class="header-row":>
+            <h3>Расписание:</h3>
+            <a class="btn btn-primary" th:href="'/scheduleManager?course=' + ${course.id}">Изменить</a>
+        </div>
         <div class="table-header">
             <div class="row">
                 <div class="col col-id">День недели</div>
@@ -108,7 +111,10 @@
     </div>
     <hr/>
     <div class="">
-        <h3>Преподаватели:</h3>
+        <div class="header-row":>
+            <h3>Преподаватели:</h3>
+            <a class="btn btn-primary" th:href="'/relationManager?teacher=-1&course=' + ${course.id}">Изменить</a>
+        </div>
         <div class="table-header">
             <div class="row">
                 <div class="col col-id">ID</div>
@@ -132,7 +138,10 @@
     <hr/>
 
     <div class="">
-        <h3>Студенты:</h3>
+        <div class="header-row":>
+            <h3>Студенты:</h3>
+            <a class="btn btn-primary" th:href="'/relationManager?student=-1&course=' + ${course.id}">Изменить</a>
+        </div>
         <div class="row" th:if="${course.students != null}"
              style="border-left: black solid 2px;
                     border-top: black solid 2px;">
