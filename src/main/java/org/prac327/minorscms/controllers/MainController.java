@@ -102,7 +102,7 @@ public class MainController {
 //        courses.stream().  .forEach((c, i)->
         model.addAttribute("courses", courses);
         model.addAttribute("schedules", syncSchedules);
-        log.warn(syncSchedules.toString());
+//        log.warn(syncSchedules.toString());
         return "courseList";
     }
 
@@ -167,9 +167,9 @@ public class MainController {
             model.addAttribute("phone", teacher.getPhone());
             model.addAttribute("education", teacher.getEducation());
             model.addAttribute("company", teacher.getCompany());
-            model.addAttribute("companies", companyRepository.findAll());
 
         }
+        model.addAttribute("companies", companyRepository.findAll());
         return "/registerTeacher";
     }
     @PostMapping("/register/teacher")
@@ -209,10 +209,10 @@ public class MainController {
             model.addAttribute("company", course.getCompany());
             model.addAttribute("description", course.getDescription());
             model.addAttribute("plan", course.getPlan());
-            model.addAttribute("companies", companyRepository.findAll());
 
 
         }
+        model.addAttribute("companies", companyRepository.findAll());
         return "/registerCourse";
     }
     @PostMapping("/register/course")
