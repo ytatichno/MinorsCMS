@@ -37,7 +37,10 @@
   <hr th:if="${student.courses}"/>
 
   <div th:if="${student.courses}" class="">
-    <h3 th:text="'Курсы(' + ${student.courses.size()} +'): '"></h3>
+    <div class="header-row">
+      <h3 th:text="'Курсы(' + ${student.courses.size()} +'): '"></h3>
+      <a class="btn btn-primary" th:href="'/relationManager?course=-1&student=' + ${student.id}">Изменить</a>
+    </div>
     <div class=" ">
       <div class="table-header">
         <div class="row">
