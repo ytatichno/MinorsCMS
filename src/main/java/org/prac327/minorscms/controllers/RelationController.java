@@ -1,7 +1,13 @@
 package org.prac327.minorscms.controllers;
 
 import jakarta.persistence.EntityManager;
+import jakarta.transaction.Transactional;
+import org.prac327.minorscms.models.Students2Courses;
 import org.prac327.minorscms.models.Teachers2Courses;
+import org.prac327.minorscms.repositories.CourseRepository;
+import org.prac327.minorscms.repositories.ScheduleRepository;
+import org.prac327.minorscms.repositories.StudentRepository;
+import org.prac327.minorscms.repositories.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,9 +25,20 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/relate")
+@Transactional
 public class RelationController {
     @Autowired
     EntityManager entityManager;
+
+    @Autowired
+    TeacherRepository teacherRepository;
+    @Autowired
+    StudentRepository studentRepository;
+    @Autowired
+    CourseRepository courseRepository;
+    @Autowired
+    ScheduleRepository scheduleRepository;
+
     @GetMapping("/t2c/{teacherId}/{courseId}")
     public ResponseEntity<?> checkT2CRelation(@PathVariable Long teacherId, @PathVariable Long courseId){
         List<Teachers2Courses> relation = entityManager
