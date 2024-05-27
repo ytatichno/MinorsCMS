@@ -178,6 +178,30 @@ public class MainController {
         return "redirect:/student/" + student.getId();
     }
 
+    @GetMapping("/register/course/{id}")
+    public String registerCourseView(@PathVariable("id") Long id, Model model){
+        if(id > 0){
+            Course course = courseRepository.findById(id).orElseThrow();
+            model.addAttribute("id", course.getId());
+            model.addAttribute("name", course.getName());
+            model.addAttribute("company", course.getCompany());
+            model.addAttribute("description", course.getDescription());
+            model.addAttribute("plan", course.getPlan());
+            model.addAttribute("companies", companyRepository.findAll());
+
+
+        }
+        return "/registerCourse";
+    }
+    @PostMapping("/register/course")
+    public String registerCourse(Course course, Model model){
+        if(course.getId()<=0)
+            course.setId(null);
+        courseRepository.save(course);
+
+        return "redirect:/course/" + course.getId();
+    }
+
 
 
 
