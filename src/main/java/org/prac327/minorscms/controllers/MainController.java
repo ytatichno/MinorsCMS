@@ -174,6 +174,8 @@ public class MainController {
     }
     @PostMapping("/register/teacher")
     public String registerTeacher(Teacher teacher, Model model){
+        if(teacher.getId()<=0)
+            teacher.setId(null);
         teacherRepository.save(teacher);
 
         return "redirect:/teacher/" + teacher.getId();
