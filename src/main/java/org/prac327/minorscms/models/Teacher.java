@@ -47,4 +47,9 @@ public class Teacher {
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "teacher", fetch = FetchType.LAZY)
     List<Teachers2Courses> courses;
 
+    public String getInitials(){
+        return lastname + "  "
+                + name.charAt(0) + ". "
+                + (fathername != null ? fathername.charAt(0) + "." : "");
+    }
 }
