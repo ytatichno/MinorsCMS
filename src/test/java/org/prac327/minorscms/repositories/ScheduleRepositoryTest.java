@@ -71,8 +71,8 @@ class ScheduleRepositoryTest {
         schedule.setTeachCour(teachCour);
         schedule.setClassroom(classroom);
         schedule.setDayOfWeek(dayOfWeek);
-        schedule.setStart_time(start_time);
-        schedule.setEnd_time(end_time);
+        schedule.setStart_time(start_time.toString());
+        schedule.setEnd_time(end_time.toString());
         return schedule;
     }
 
