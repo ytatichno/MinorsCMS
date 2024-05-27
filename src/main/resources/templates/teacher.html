@@ -15,6 +15,7 @@
 <header th:insert="~{fragments/header :: header}"></header>
 <div class="container mt-5">
   <h1 th:text="'Карточка преподавателя ' + ${teacher.id}"></h1>
+  <a class="btn btn-primary btn-entity-update" th:href="'/register/teacher/' + ${teacher.id}">Изменить</a>
   <div class="table-header">
     <div class="row">
       <div class="col col-id">Фамилия:</div>

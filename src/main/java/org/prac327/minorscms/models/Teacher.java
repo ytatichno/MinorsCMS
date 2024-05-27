@@ -41,7 +41,7 @@ public class Teacher {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company")
     @ToString.Exclude
-    @NonNull
+//    @NonNull
     private Company company;
 
     @OneToMany(cascade=CascadeType.ALL, mappedBy = "teacher", fetch = FetchType.LAZY)

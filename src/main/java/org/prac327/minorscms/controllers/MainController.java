@@ -149,8 +149,22 @@ public class MainController {
 
         return "redirect:/company/" + company.getId();
     }
-    @GetMapping("/register/teacher")
-    public String registerTeacherView(Model model){
+    @GetMapping("/register/teacher/{id}")
+    public String registerTeacherView(@PathVariable("id") Long id, Model model){
+        if(id > 0){
+            Teacher teacher = teacherRepository.findById(id).orElseThrow();
+            model.addAttribute("id", teacher.getId());
+            model.addAttribute("lastname", teacher.getLastname());
+            model.addAttribute("name", teacher.getName());
+            model.addAttribute("fathername", teacher.getFathername());
+            model.addAttribute("phone", teacher.getPhone());
+            model.addAttribute("mail", teacher.getMail());
+            model.addAttribute("phone", teacher.getPhone());
+            model.addAttribute("education", teacher.getEducation());
+            model.addAttribute("company", teacher.getCompany());
+            model.addAttribute("companies", companyRepository.findAll());
+
+        }
         return "/registerTeacher";
     }
     @PostMapping("/register/teacher")
@@ -168,11 +182,12 @@ public class MainController {
             model.addAttribute("name", student.getName());
             model.addAttribute("fathername", student.getFathername());
             model.addAttribute("phone", student.getPhone());
+
         }
         return "/registerStudent";
     }
     @PostMapping("/register/student")
-    public String registerTeacher(Student student, Model model){
+    public String registerStudent(Student student, Model model){
         if(student.getId() <= 0)
             student.setId(null);
         studentRepository.save(student);
