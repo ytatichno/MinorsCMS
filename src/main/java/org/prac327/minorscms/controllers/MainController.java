@@ -125,12 +125,24 @@ public class MainController {
         return "/studentList";
     }
 
-    @GetMapping("/register/company")
-    public String registerCompanyView(Model model){
+    @GetMapping("/register/company/{id}")
+    public String registerCompanyView(@PathVariable("id") Long id, Model model){
+        if(id > 0){
+            Company company = companyRepository.findById(id).orElseThrow();
+            model.addAttribute("id", company.getId());
+            model.addAttribute("name", company.getName());
+            model.addAttribute("shortname", company.getShortname());
+            model.addAttribute("description", company.getDescription());
+            model.addAttribute("phone", company.getPhone());
+            model.addAttribute("address", company.getAddress());
+
+        }
         return "/registerCompany";
     }
     @PostMapping("/register/company")
     public String registerCompany(Company company, Model model){
+        if(company.getId()<0)
+            company.setId(null);
         companyRepository.save(company);
 
         return "redirect:/company/" + company.getId();
