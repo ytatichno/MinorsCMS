@@ -10,8 +10,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
+import java.util.ConcurrentModificationException;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.atomic.AtomicReferenceArray;
@@ -194,15 +196,37 @@ public class MainController {
         return "/registerCourse";
     }
     @PostMapping("/register/course")
-    public String registerCourse(Course course, Model model){
-        if(course.getId()<=0)
+    public String registerCourse(Course course, Model model) {
+        if (course.getId() <= 0)
             course.setId(null);
+//        if(course.)
         courseRepository.save(course);
 
         return "redirect:/course/" + course.getId();
     }
 
+    @GetMapping("/relationManager")
+    public String relationManager(@RequestParam(required = false) Long teacher,
+                                  @RequestParam(required = false) Long student,
+                                  @RequestParam(required = false) Long course,
+                                  Model model) {
+        if (teacher != null && student != null && course != null)
+            throw new ConcurrentModificationException("Two many entities for relation Manager");
+        model.addAttribute("courses", courseRepository.findAll());
+        if (teacher != null) {
+            if (teacher > 0)
+                model.addAttribute("teacher", teacherRepository.findById(teacher).orElseThrow());
+            model.addAttribute("teachers", teacherRepository.findAll());
+        } else if (student != null) {
+            if (student > 0)
+                model.addAttribute("student", studentRepository.findById(student).orElseThrow());
+            model.addAttribute("students", studentRepository.findAll());
+        }
+        if (course != null && course > 0)
+            model.addAttribute("course", courseRepository.findById(course).orElseThrow());
 
+        return "/relationManager";
+    }
 
 
     @GetMapping("/test")
