@@ -18,7 +18,7 @@ public class Schedule  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "teach_cour")
     @ToString.Exclude
     @NonNull
@@ -41,7 +41,19 @@ public class Schedule  {
 
 //    @SuppressWarnings
     public String getInterval(){
-        return "(" + start_time.getHours() + ":" + start_time.getMinutes() + " - " + end_time.getHours() + ":" + end_time.getMinutes() + ")";
+
+        return "(" + getPrettyStartTime() + " - " + getPrettyEndTime() + ")";
+    }
+
+    public String getPrettyStartTime(){
+        return (start_time.getHours() == 0 ? "00" :start_time.getHours())
+                + ":"
+                + (start_time.getMinutes() == 0 ? "00" :start_time.getMinutes());
+    }
+    public String getPrettyEndTime(){
+        return (end_time.getHours() == 0 ? "00" :end_time.getHours())
+                + ":"
+                + (end_time.getMinutes() == 0 ? "00" :end_time.getMinutes());
     }
 
 //    public void setStart_time(Time start_time) {
