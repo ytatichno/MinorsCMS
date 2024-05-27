@@ -14,7 +14,7 @@
 <body>
 <div class="container">
     <h1 th:text="'Описание компании ' + ${company.shortname}"></h1>
-    <a class="btn btn-primary btn-list-add" th:href="'/register/company/' + ${company.id}">Изменить</a>
+    <a class="btn btn-primary btn-entity-update" th:href="'/register/company/' + ${company.id}">Изменить</a>
     <div class="table-header">
         <div class="row">
             <div class="col col-id">Название:</div>
