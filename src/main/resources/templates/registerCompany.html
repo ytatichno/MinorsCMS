@@ -13,29 +13,43 @@
 </head>
 <body>
 <div class="container">
-    <h1 >Регистрация новой компании</h1>
+    <h1 th:if="!${id}">Регистрация новой компании</h1>
+    <h1 th:if="${id}" th:text="'Изменение компании' + ${id}"></h1>
     <form th:action="@{/register/company}" method="POST">
         <div class="table-header">
+            <div th:if="${id}" hidden>
+                <input type="text" name="id" th:value="${id}">
+            </div>
             <div class="row">
                 <div class="col col-id">Название:</div>
-                <div class="col col-form-control"><input type="text" name="name"></div>
+                <div class="col col-form-control">
+                    <input type="text" name="name" th:value="${name}">
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col col-id">Сокращенно:</div>
-            <div class="col col-form-control"><input type="text" name="shortname"></div>
+            <div class="col col-form-control">
+                <input type="text" name="shortname" th:value="${shortname}">
+            </div>
         </div>
         <div class="row">
             <div class="col col-id">Описание:</div>
-            <div class="col col-form-control"><textarea name="description"></textarea></div>
+            <div class="col col-form-control">
+                <textarea name="description" th:value="${description}"></textarea>
+            </div>
         </div>
         <div class="row">
             <div class="col col-id">Адрес:</div>
-            <div class="col col-form-control"><input type="text" name="address"></div>
+            <div class="col col-form-control">
+                <input type="text" name="address" th:value="${address}">
+            </div>
         </div>
         <div class="row">
             <div class="col col-id">Телефон:</div>
-            <div class="col col-form-control"><input type="text" name="phone"></div>
+            <div class="col col-form-control">
+                <input type="text" name="phone" th:value="${phone}">
+            </div>
         </div>
         <button class="btn btn-primary mt-3" type="submit">Сохранить</button>
     </form>
