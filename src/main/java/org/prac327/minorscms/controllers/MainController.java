@@ -74,8 +74,7 @@ public class MainController {
     @GetMapping("/courses")
     public String getCourses(Model model) throws InterruptedException {
         List<Course> courses = courseRepository.findAll();
-//        List<List<Schedule>> schedules = new ArrayList<List<Schedule>>(Collections.nCopies(courses.size(), (List<Schedule>)null));
-//        List[] schedules = new List[courses.size()];
+
         AtomicReferenceArray<List<Schedule>> schedules = new AtomicReferenceArray<>(courses.size());
 //        int[] a = new int[]
         Semaphore semaphore = new Semaphore(0);
@@ -92,14 +91,12 @@ public class MainController {
                                         })
                 );
         semaphore.acquire(courses.size());
-//        Thread.sleep(100);
-//        log.info(schedules.get(3).toString());
+
         ArrayList<List<Schedule>> syncSchedules = new ArrayList<>(courses.size());
         for(int i = 0; i < courses.size(); i++){
             syncSchedules.add(schedules.get(i));
         }
-//        semaphore.setRelease();
-//        courses.stream().  .forEach((c, i)->
+
         model.addAttribute("courses", courses);
         model.addAttribute("schedules", syncSchedules);
 //        log.warn(syncSchedules.toString());
@@ -259,10 +256,4 @@ public class MainController {
 
     }
 
-
-    @GetMapping("/test")
-    public String test() {
-
-        return "/test";
-    }
 }

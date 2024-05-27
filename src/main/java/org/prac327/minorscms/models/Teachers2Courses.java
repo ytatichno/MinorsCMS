@@ -3,8 +3,6 @@ package org.prac327.minorscms.models;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
 @Entity
 @Table(name = "teachers_courses",
         uniqueConstraints = {
@@ -13,7 +11,6 @@ import java.util.List;
 )
 @Getter
 @Setter
-//@ToString
 @NoArgsConstructor
 public class Teachers2Courses {
 
@@ -33,9 +30,7 @@ public class Teachers2Courses {
     @ToString.Exclude
     @NonNull
     private Teacher teacher;
-//
-//    @OneToMany(mappedBy = "teachCour", fetch = FetchType.LAZY)
-//    private List<Schedule> schedules;
+
 
     public Teachers2Courses(@NonNull Teacher teacher, @NonNull Course course) {
         this.teacher = teacher;

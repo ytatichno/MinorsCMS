@@ -22,17 +22,13 @@ public class Account {
     @Column
     private String password;
 
-//    @Column
     @OneToOne
     @JoinColumn(name = "student_card")
     private Student studentCard;
 
-//    @Column
     @OneToOne
     @JoinColumn(name = "teacher_card")
     private Teacher teacherCard;
 
-//    public UserDetails getUserDetails(){
-//
-//    }
+
 }

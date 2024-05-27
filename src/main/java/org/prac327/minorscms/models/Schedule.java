@@ -56,17 +56,9 @@ public class Schedule  {
                 + (end_time.getMinutes() == 0 ? "00" :end_time.getMinutes());
     }
 
-//    public void setStart_time(Time start_time) {
-//        this.start_time = start_time;
-//    }
-//
-//    public void setEnd_time(Time end_time) {
-//        this.end_time = end_time;
-//    }
+
 
     public void setStart_time(String start_time) {
-//        String[] split = start_time.split(":");
-//        this.start_time = new Time(Integer.parseInt(split[0]), Integer.parseInt(split[1]),0);
         this.start_time = Time.valueOf(start_time + ":0");
     }
 

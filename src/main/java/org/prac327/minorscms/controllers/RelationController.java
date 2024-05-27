@@ -100,7 +100,6 @@ public class RelationController {
         entityManager.remove(toRemove);
         return ResponseEntity.ok(null);
     }
-//    @Transactional
     @DeleteMapping("/s2c/{studentId}/{courseId}")
     public ResponseEntity<?> removeS2CRelation(@PathVariable Long studentId, @PathVariable Long courseId){
         Students2Courses toRemove = entityManager
