@@ -74,7 +74,7 @@ public class RelationController {
         );
         entityManager.persist(newRelation);
 //        entityManager.flush();
-        return ResponseEntity.ok(newRelation);
+        return ResponseEntity.ok(null);
     }
     @PostMapping("/s2c/{studentId}/{courseId}")
     public ResponseEntity<?> createS2CRelation(@PathVariable Long studentId, @PathVariable Long courseId){
@@ -84,7 +84,7 @@ public class RelationController {
         );
         entityManager.persist(newRelation);
 //        entityManager.flush();
-        return ResponseEntity.ok(newRelation);
+        return ResponseEntity.ok(null);
     }
 //    @Transactional
     @DeleteMapping("/t2c/{teacherId}/{courseId}")
@@ -98,7 +98,7 @@ public class RelationController {
                 .getSingleResult();
         scheduleRepository.deleteAllByTeachCour(toRemove);
         entityManager.remove(toRemove);
-        return ResponseEntity.ok(toRemove);
+        return ResponseEntity.ok(null);
     }
 //    @Transactional
     @DeleteMapping("/s2c/{studentId}/{courseId}")
@@ -111,6 +111,6 @@ public class RelationController {
                 .setParameter("courseId", courseId)
                 .getSingleResult();
         entityManager.remove(toRemove);
-        return ResponseEntity.ok(toRemove);
+        return ResponseEntity.ok(null);
     }
 }
