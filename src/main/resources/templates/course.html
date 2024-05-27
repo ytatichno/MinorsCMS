@@ -14,6 +14,7 @@
 <body>
 <div class="container">
     <h1>Описание курса</h1>
+    <a class="btn btn-primary btn-entity-update" th:href="'/register/course/' + ${course.id}">Изменить</a>
     <div class="table-header">
         <div class="row">
             <div class="col col-id">Название:</div>
@@ -26,11 +27,12 @@
     </div>
     <div class="row">
         <div class="col col-id">Компания:</div>
-        <a class="col" th:text="${course.company.name}"
-           th:href="'/company/' + ${course.company.id}">
-            -
-        </a>
-
+        <div class="col">
+            <a th:if="${course.company}" th:text="${course.company.name}"
+               th:href="'/company/' + ${course.company.id}">
+                -
+            </a>
+        </div>
     </div>
     <div class="row">
         <div class="col col-id">План курса:</div>
