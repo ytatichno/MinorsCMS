@@ -207,7 +207,7 @@
 </body>
 <script>
     function delSched(id) {
-        const url = "/schedule/delete" + id;
+        const url = "/schedule/delete/" + id;
         const prom = fetch(url, {
             method: "DELETE"
         });
