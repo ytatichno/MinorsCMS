@@ -90,7 +90,11 @@
     position: absolute;
     right: 10%;
     top: 6%;
-
+}
+.btn-entity-update{
+    position: absolute;
+    right: 18%;
+    top: 1%;
 }
 
 .col-form-control{
