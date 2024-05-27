@@ -2,6 +2,7 @@ package org.prac327.minorscms.repositories;
 
 import org.prac327.minorscms.models.Course;
 import org.prac327.minorscms.models.Schedule;
+import org.prac327.minorscms.models.Teachers2Courses;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.scheduling.annotation.Async;
@@ -22,4 +23,6 @@ public interface ScheduleRepository extends JpaRepository<Schedule, Long> {
     @Async
     @Query("SELECT s FROM Schedule s WHERE s.teachCour.course = ?1")
     CompletableFuture<List<Schedule>> findByCourseAsync(Course course);
+
+    void deleteAllByTeachCour(Teachers2Courses teachCour);
 }
