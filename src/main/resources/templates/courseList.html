@@ -13,6 +13,7 @@
 <body>
 <div class="container mt-5">
     <h1 class="mb-4">Список курсов</h1>
+    <a class="btn btn-primary btn-list-add" href="/register/course/-1">Зарегистрировать курс</a>
     <div class=" ">
         <div class="table-header">
             <div class="row">
@@ -37,7 +38,7 @@
                 </span>
             </div>
             <div class="col" >
-                <div class="tooltip-custom" >
+                <div th:if="${course.company}" class="tooltip-custom" >
                     <span th:text="${course.company.shortname}"></span>
                     <span class="tooltiptext-custom tooltip-bottom"
                           th:text="${course.company.name}"
