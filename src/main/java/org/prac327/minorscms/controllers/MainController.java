@@ -141,7 +141,7 @@ public class MainController {
     }
     @PostMapping("/register/company")
     public String registerCompany(Company company, Model model){
-        if(company.getId()<0)
+        if(company.getId()<=0)
             company.setId(null);
         companyRepository.save(company);
 
@@ -157,12 +157,22 @@ public class MainController {
 
         return "redirect:/teacher/" + teacher.getId();
     }
-    @GetMapping("/register/student")
-    public String registerStudentView(Model model){
+    @GetMapping("/register/student/{id}")
+    public String registerStudentView(@PathVariable("id") Long id, Model model){
+        if(id > 0){
+            Student student = studentRepository.findById(id).orElseThrow();
+            model.addAttribute("id", student.getId());
+            model.addAttribute("lastname", student.getLastname());
+            model.addAttribute("name", student.getName());
+            model.addAttribute("fathername", student.getFathername());
+            model.addAttribute("phone", student.getPhone());
+        }
         return "/registerStudent";
     }
     @PostMapping("/register/student")
     public String registerTeacher(Student student, Model model){
+        if(student.getId() <= 0)
+            student.setId(null);
         studentRepository.save(student);
 
         return "redirect:/student/" + student.getId();
