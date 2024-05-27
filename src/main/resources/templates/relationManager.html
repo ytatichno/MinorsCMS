@@ -12,7 +12,8 @@
 
 </head>
 <body>
-<div class="container">
+<header th:insert="~{fragments/header :: header}"></header>
+<div class="container mt-5">
     <h1 th:if="${teachers}">Связь Преподаватель-Курс</h1>
     <h1 th:if="${students}">Связь Студент-Курс</h1>
 

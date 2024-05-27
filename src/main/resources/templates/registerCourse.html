@@ -12,7 +12,8 @@
 
 </head>
 <body>
-<div class="container">
+<header th:insert="~{fragments/header :: header}"></header>
+<div class="container mt-5">
   <h1 th:if="!${id}">Регистрация нового курса</h1>
   <h1 th:if="${id}" th:text="'Изменение курса ' + ${id}"></h1>
   <form th:action="@{/register/course}" method="POST">

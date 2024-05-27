@@ -12,7 +12,8 @@
 
 </head>
 <body>
-<div class="container">
+<header th:insert="~{fragments/header :: header}"></header>
+<div class="container mt-5">
     <h1 >Регистрация нового преподавателя</h1>
     <form th:action="@{/register/teacher}" method="POST">
         <div class="table-header">

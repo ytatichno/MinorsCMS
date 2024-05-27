@@ -12,7 +12,8 @@
 
 </head>
 <body>
-<div class="container">
+<header th:insert="~{fragments/header :: header}"></header>
+<div class="container mt-5">
     <h1 th:if="!${id}">Регистрация нового студента</h1>
     <h1 th:if="${id}" th:text="'Изменение карточки студента ' + ${id}"></h1>
     <form th:action="@{/register/student}" method="POST">

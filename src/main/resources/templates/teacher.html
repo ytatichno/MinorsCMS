@@ -12,7 +12,8 @@
 
 </head>
 <body>
-<div class="container">
+<header th:insert="~{fragments/header :: header}"></header>
+<div class="container mt-5">
   <h1 th:text="'Карточка преподавателя ' + ${teacher.id}"></h1>
   <div class="table-header">
     <div class="row">

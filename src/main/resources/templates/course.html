@@ -12,7 +12,8 @@
 
 </head>
 <body>
-<div class="container">
+<header th:insert="~{fragments/header :: header}"></header>
+<div class="container mt-5">
     <h1>Описание курса</h1>
     <a class="btn btn-primary btn-entity-update" th:href="'/register/course/' + ${course.id}">Изменить</a>
     <div class="table-header">
