@@ -37,6 +37,11 @@ public class MainController {
     @Autowired
     TeacherRepository teacherRepository;
 
+    @GetMapping("/")
+    public String index(){
+        return "redirect:/courses";
+    }
+
     @GetMapping("/course/{id}")
     public String getCourse(@PathVariable("id") Long id, Model model){
         Course course = courseRepository.findById(id).orElseThrow();
