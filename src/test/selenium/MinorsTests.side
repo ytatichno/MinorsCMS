@@ -1,0 +1,3459 @@
+{
+  "id": "d71d88c0-57fc-4b82-b7ed-a9fb86af52a0",
+  "version": "2.0",
+  "name": "Minors tests",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "893fa379-5066-4150-a92c-92140a35cf69",
+    "name": "Pages change",
+    "commands": [{
+      "id": "b9ca8253-34ed-4295-b590-fc0a11bf4c6f",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48f1a71e-0693-4b6a-b935-c05911aaaada",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "181cc0ac-5e5b-4746-895d-dee5f891c1a8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Преподаватели",
+      "targets": [
+        ["linkText=Преподаватели", "linkText"],
+        ["css=li:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Преподаватели')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/teachers')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Преподаватели')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "432f0ced-a6a5-47f0-a1b2-47c43183112f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Студенты",
+      "targets": [
+        ["linkText=Студенты", "linkText"],
+        ["css=li:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Студенты')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/students')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Студенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f23af54d-227f-4a3e-99f6-326117251f4a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Компании",
+      "targets": [
+        ["linkText=Компании", "linkText"],
+        ["css=li:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Компании')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/companies')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Компании')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a83d03ee-efd8-43c4-802c-7f02fb0cecd5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Курсы",
+      "targets": [
+        ["linkText=Курсы", "linkText"],
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Курсы')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/courses')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Курсы')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8a28af9-a82d-4a80-9b8e-f27ed88cb635",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row-href:nth-child(1) > .col-4",
+      "targets": [
+        ["css=.row-href:nth-child(1) > .col-4", "css:finder"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86d030b0-784a-4bac-bfe3-fea758c2e035",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Банк Санкт-Петербург",
+      "targets": [
+        ["linkText=Банк Санкт-Петербург", "linkText"],
+        ["css=.col > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Банк Санкт-Петербург')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/company/1')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Банк Санкт-Петербург')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e215b76-23dd-49d1-9e43-f0fdc2206e79",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=4",
+      "targets": [
+        ["linkText=4", "linkText"],
+        ["css=.row:nth-child(3) > .col-id", "css:finder"],
+        ["xpath=//a[contains(text(),'4')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/teacher/4')]", "xpath:href"],
+        ["xpath=//div[6]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'4')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24ae8cbe-779c-4539-91e2-b92d923058f7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Студенты",
+      "targets": [
+        ["linkText=Студенты", "linkText"],
+        ["css=li:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Студенты')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/students')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Студенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "75cee8ab-00a0-4361-841f-2f6b93f2bd05",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row-href:nth-child(1) > .col-2:nth-child(2)",
+      "targets": [
+        ["css=.row-href:nth-child(1) > .col-2:nth-child(2)", "css:finder"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ecb6e9f-15a9-42cb-a193-8a15d27dbc8a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(2) > .col-id",
+      "targets": [
+        ["css=.row:nth-child(2) > .col-id", "css:finder"],
+        ["xpath=//a[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6cadb4f5-af41-4f5d-a8b4-38ce26815fad",
+    "name": "Add Course",
+    "commands": [{
+      "id": "181fc246-0886-43a8-b80b-60586bf142f4",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93177c91-48d6-49e1-8f63-85ef2159fba3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7998be2-70c9-4b47-89bb-3cde747a17d3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Зарегистрировать курс",
+      "targets": [
+        ["linkText=Зарегистрировать курс", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Зарегистрировать курс')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register/course/-1')]", "xpath:href"],
+        ["xpath=//body/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Зарегистрировать курс')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "febd9de5-321f-4072-a471-eef7447d3e7f",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c522020d-ae32-4b31-b03d-19a89b824eeb",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Test Course"
+    }, {
+      "id": "34aadfe0-26e5-49b4-a5fa-1fdfb7089169",
+      "comment": "",
+      "command": "click",
+      "target": "name=company",
+      "targets": [
+        ["name=company", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='company']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c261f8a-8db2-42d3-8702-591968955f16",
+      "comment": "",
+      "command": "select",
+      "target": "name=company",
+      "targets": [],
+      "value": "label=TC"
+    }, {
+      "id": "4bbb1442-80c4-4662-91dd-cc884f6eb9df",
+      "comment": "",
+      "command": "click",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c779c60-3a8f-410a-8e7c-92053cc20fb8",
+      "comment": "",
+      "command": "type",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "test description"
+    }, {
+      "id": "c593939b-c8fe-423b-b46f-7d7ef40fe68f",
+      "comment": "",
+      "command": "click",
+      "target": "name=plan",
+      "targets": [
+        ["name=plan", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='plan']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c51641c-ab9d-4375-9b8e-36e7ed539472",
+      "comment": "",
+      "command": "type",
+      "target": "name=plan",
+      "targets": [
+        ["name=plan", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='plan']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "https://someurl.com"
+    }, {
+      "id": "f92b2690-61d8-423d-bad9-3ec01737d82c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8444949-075e-4796-b48c-38e439960d6b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-bold",
+      "targets": [
+        ["css=.text-bold", "css:finder"],
+        ["xpath=//div/div[2]", "xpath:position"]
+      ],
+      "value": "Test Course"
+    }, {
+      "id": "4175ff6e-21d0-4825-907a-66f0a628edb9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(4) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(4) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "test description"
+    }, {
+      "id": "c15fb28a-62f5-40f1-86f5-266ec64d3d8c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(5) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(5) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "TestCo"
+    }, {
+      "id": "ac6dbcc9-68e3-463b-b085-a8a38c4262fa",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(6) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(6) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "https://someurl.com"
+    }, {
+      "id": "68a2a879-7171-4728-aa66-e621cff3e77c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=TestCo",
+      "targets": [
+        ["linkText=TestCo", "linkText"],
+        ["css=.col > a", "css:finder"],
+        ["xpath=//a[contains(text(),'TestCo')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/company/7')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'TestCo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "44e44354-6a56-47b7-8d95-1fdfdd92f999",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-bold",
+      "targets": [
+        ["css=.text-bold", "css:finder"],
+        ["xpath=//div/div[2]", "xpath:position"]
+      ],
+      "value": "TestCo"
+    }]
+  }, {
+    "id": "ed29dec6-d3b2-44d1-a32d-6a0d3311d4d8",
+    "name": "Add Student",
+    "commands": [{
+      "id": "e2aeedb0-ce26-4dce-87b0-9ba76c07942d",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d16c2295-5758-40b4-b40a-7ce26361cd7b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dde192d1-77ee-47c9-a001-6793d146caa5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Студенты",
+      "targets": [
+        ["linkText=Студенты", "linkText"],
+        ["css=li:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Студенты')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/students')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Студенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "28731f2b-04f5-41c8-9800-921b4c08d13f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Зарегистрировать студента",
+      "targets": [
+        ["linkText=Зарегистрировать студента", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Зарегистрировать студента')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register/student/-1')]", "xpath:href"],
+        ["xpath=//body/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Зарегистрировать студента')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae8c3549-45dd-4992-86a4-971b5f589c05",
+      "comment": "",
+      "command": "click",
+      "target": "name=lastname",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c383cccf-bf87-402b-9b3c-319058f0fc63",
+      "comment": "",
+      "command": "click",
+      "target": "css=.mt-5",
+      "targets": [
+        ["css=.mt-5", "css:finder"],
+        ["xpath=//body/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3d2a8055-1d71-4828-a7a6-13c75a6f898b",
+      "comment": "",
+      "command": "type",
+      "target": "name=lastname",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Тестов"
+    }, {
+      "id": "0c55122e-a79e-414f-a366-ca19d0bddb7c",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "593c65b0-1b5d-46c3-b618-47286680d730",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Тест"
+    }, {
+      "id": "61e88762-343f-404d-8cdb-417b8fe1eb6e",
+      "comment": "",
+      "command": "click",
+      "target": "name=fathername",
+      "targets": [
+        ["name=fathername", "name"],
+        ["css=.row:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='fathername']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3fd6804-bdee-4393-8fb2-8c44b20acf15",
+      "comment": "",
+      "command": "type",
+      "target": "name=fathername",
+      "targets": [
+        ["name=fathername", "name"],
+        ["css=.row:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='fathername']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Тестович"
+    }, {
+      "id": "24e5416b-06d0-4bee-8c73-e2b23ccfc6b6",
+      "comment": "",
+      "command": "click",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "51acf84d-1a05-4268-b249-4dd4bd7f4cf0",
+      "comment": "",
+      "command": "type",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "+7111111"
+    }, {
+      "id": "794b746e-39a0-4471-819b-72716bc17333",
+      "comment": "",
+      "command": "click",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css:finder"],
+        ["xpath=//form[@action='/register/student']", "xpath:attributes"],
+        ["xpath=//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d12c83b2-ffb9-4ac6-aefc-6bd5f7022cf8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c6d8672-1541-42b3-b63f-ab2abbe58988",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-bold",
+      "targets": [
+        ["css=.text-bold", "css:finder"],
+        ["xpath=//div/div[2]", "xpath:position"]
+      ],
+      "value": "Тестов"
+    }, {
+      "id": "dd01326e-bc4b-425d-a8b7-cd9231a0df7d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(4) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(4) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Тест"
+    }, {
+      "id": "b2a9a923-adf1-4330-8046-77760ffd5671",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(5) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(5) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "Тестович"
+    }, {
+      "id": "6ea92ddd-3c04-4f1b-8f32-0e8ad6cf6bcb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(6) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(6) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "+7111111"
+    }]
+  }, {
+    "id": "444e238d-04fe-4941-a699-bd9a92bed781",
+    "name": "Add Company",
+    "commands": [{
+      "id": "b5894d1e-b651-4b8c-831f-3ac333c42331",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3001dd08-71e5-47ab-8b5b-ae3487063319",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f4d5762-479f-4905-bf02-030ad4cfe0d3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Компании",
+      "targets": [
+        ["linkText=Компании", "linkText"],
+        ["css=li:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Компании')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/companies')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Компании')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "acb5bb86-ee11-4ef4-8de7-644aae9f329b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Зарегистрировать компанию",
+      "targets": [
+        ["linkText=Зарегистрировать компанию", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Зарегистрировать компанию')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register/company/-1')]", "xpath:href"],
+        ["xpath=//body/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Зарегистрировать компанию')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5968f582-f9fa-451e-ae14-c6c9f89166af",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3af9516e-9aa8-476b-912b-cd0cef7109b4",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "TestCo"
+    }, {
+      "id": "1c130120-8723-4deb-a975-e6e10f4b6c5d",
+      "comment": "",
+      "command": "click",
+      "target": "name=shortname",
+      "targets": [
+        ["name=shortname", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='shortname']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "89ff3a41-5ebd-48b5-bf25-b689c8b9dde2",
+      "comment": "",
+      "command": "type",
+      "target": "name=shortname",
+      "targets": [
+        ["name=shortname", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='shortname']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "TC"
+    }, {
+      "id": "cab40230-5b13-40be-96ee-415fa1b4fb6f",
+      "comment": "",
+      "command": "click",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0d45229-097e-4faa-a6af-047eff922054",
+      "comment": "",
+      "command": "type",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "test description"
+    }, {
+      "id": "ec451cb8-9653-4473-96ed-c88dfb4c6bff",
+      "comment": "",
+      "command": "click",
+      "target": "name=address",
+      "targets": [
+        ["name=address", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='address']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97b9b25b-35d3-4dcd-a9f4-e266ab1c479e",
+      "comment": "",
+      "command": "type",
+      "target": "name=address",
+      "targets": [
+        ["name=address", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='address']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "test address"
+    }, {
+      "id": "125b5259-6ffb-40c7-9a56-4cff9a389aad",
+      "comment": "",
+      "command": "click",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dd5876b-8f6b-47c1-8822-710f5b1acdc7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "43a2242a-e956-4f0d-9f16-5880149fa35f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-bold",
+      "targets": [
+        ["css=.text-bold", "css:finder"],
+        ["xpath=//div/div[2]", "xpath:position"]
+      ],
+      "value": "TestCo"
+    }, {
+      "id": "24bcdde5-6a81-4cb0-9fa5-0058a6286c58",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(4) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(4) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "test description"
+    }, {
+      "id": "f47e8bf7-cd98-4d73-ad48-621876be45fa",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(5) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(5) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "test address"
+    }, {
+      "id": "aa05f459-3224-4062-a2d6-2c9be630be81",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div:nth-child(8) > h3",
+      "targets": [
+        ["css=div:nth-child(8) > h3", "css:finder"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Курсы(0):')]", "xpath:innerText"]
+      ],
+      "value": "Курсы(0):"
+    }]
+  }, {
+    "id": "a8801fee-5922-4520-950f-becc2f4a653d",
+    "name": "Add Teacher",
+    "commands": [{
+      "id": "846deb9b-af9e-46e5-a0cc-46cee4aa38d4",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cce71ad-deab-45ac-b07c-8073063fbbd9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7aaa8eee-4460-4ab1-9aee-327e5fb1c476",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Преподаватели",
+      "targets": [
+        ["linkText=Преподаватели", "linkText"],
+        ["css=li:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Преподаватели')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/teachers')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Преподаватели')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9ff4b4e-1a0f-4a8f-83fc-557ee4bb0fb6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Зарегистрировать преподавателя",
+      "targets": [
+        ["linkText=Зарегистрировать преподавателя", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Зарегистрировать преподавателя')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register/teacher/-1')]", "xpath:href"],
+        ["xpath=//body/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Зарегистрировать преподавателя')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cb6c5de-138c-41a8-80ed-0dbc2fe4bbd2",
+      "comment": "",
+      "command": "click",
+      "target": "name=lastname",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b6a8396-6464-46e0-91a3-c877bf7ef381",
+      "comment": "",
+      "command": "type",
+      "target": "name=lastname",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Тестов"
+    }, {
+      "id": "e1174aec-9f83-43c4-855e-17967dc7ede8",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3a236f3-6ccf-4a34-9586-27fe77a4abbe",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Тесталий"
+    }, {
+      "id": "477f4e5a-1be3-4aea-9283-3bed754a0f54",
+      "comment": "",
+      "command": "click",
+      "target": "name=fathername",
+      "targets": [
+        ["name=fathername", "name"],
+        ["css=.row:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='fathername']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c185cd2-553c-45b8-b02b-8e993f0bf4ae",
+      "comment": "",
+      "command": "type",
+      "target": "name=fathername",
+      "targets": [
+        ["name=fathername", "name"],
+        ["css=.row:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='fathername']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Тестович"
+    }, {
+      "id": "980fd743-add4-4160-950a-15d364fde6fa",
+      "comment": "",
+      "command": "click",
+      "target": "name=company",
+      "targets": [
+        ["name=company", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='company']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "95a91d08-5d20-48a0-871c-c79ee42038d4",
+      "comment": "",
+      "command": "select",
+      "target": "name=company",
+      "targets": [],
+      "value": "label=TC"
+    }, {
+      "id": "5a10feab-75a7-4dcb-9f76-b546502b726d",
+      "comment": "",
+      "command": "click",
+      "target": "name=education",
+      "targets": [
+        ["name=education", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='education']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d34f9c1-6fbc-4ca8-95f3-2177556599a2",
+      "comment": "",
+      "command": "type",
+      "target": "name=education",
+      "targets": [
+        ["name=education", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='education']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "ТестФак"
+    }, {
+      "id": "db62cebc-3c4c-4614-b372-87ea77a6439b",
+      "comment": "",
+      "command": "click",
+      "target": "name=mail",
+      "targets": [
+        ["name=mail", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='mail']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ecfeb314-84fa-4117-b1fe-539cc03e3554",
+      "comment": "",
+      "command": "type",
+      "target": "name=mail",
+      "targets": [
+        ["name=mail", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='mail']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "test@mail.ru"
+    }, {
+      "id": "d3e15610-d7ba-48d0-b4ef-0b83c116554a",
+      "comment": "",
+      "command": "click",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.row:nth-child(7) input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27472ffc-f003-4731-a322-3afbebc4dbca",
+      "comment": "",
+      "command": "click",
+      "target": "name=mail",
+      "targets": [
+        ["name=mail", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='mail']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "095f6555-90ae-4e1c-ad96-e44f860808af",
+      "comment": "",
+      "command": "type",
+      "target": "name=mail",
+      "targets": [
+        ["name=mail", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='mail']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "testov@mail.ru"
+    }, {
+      "id": "8e01ec27-b52c-4a99-b934-e735d0e2b80c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6db90108-4faa-49e1-8234-1848988e792f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-bold",
+      "targets": [
+        ["css=.text-bold", "css:finder"],
+        ["xpath=//div/div[2]", "xpath:position"]
+      ],
+      "value": "Тестов"
+    }, {
+      "id": "4d151a0a-2105-4d91-8d4c-3e0b8411b953",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(4) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(4) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Тесталий"
+    }, {
+      "id": "7e1cce71-a4a7-4152-9b1e-cc0f30d52f3b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(5) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(5) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "Тестович"
+    }, {
+      "id": "e2a66da2-2454-44da-b213-6ebdcb6afc5b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(7) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(7) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[5]/div[2]", "xpath:position"]
+      ],
+      "value": "testov@mail.ru"
+    }, {
+      "id": "52827b8e-ff25-4b49-bf5e-f3bfc2daba02",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col > div",
+      "targets": [
+        ["css=.col > div", "css:finder"],
+        ["xpath=//div[6]/div[2]/div", "xpath:position"]
+      ],
+      "value": "TestCo"
+    }, {
+      "id": "6797e9e7-a1d5-4414-b23a-b84d056ee77c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(9) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(9) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[7]/div[2]", "xpath:position"]
+      ],
+      "value": "ТестФак"
+    }]
+  }, {
+    "id": "3dc355ba-7e73-4483-8c11-00005cd6bab1",
+    "name": "Change Company",
+    "commands": [{
+      "id": "be48174e-8af6-4d08-8e30-5bd79ee3527a",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d9976f7e-8f7e-42c3-ab3c-abd2d4d726a5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "825fe69c-d6cb-47a2-8826-71acd494f120",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Компании",
+      "targets": [
+        ["linkText=Компании", "linkText"],
+        ["css=li:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Компании')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/companies')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Компании')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6899081-2079-4458-84af-e1c98800c9d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(6) > .col-4",
+      "targets": [
+        ["css=.row:nth-child(6) > .col-4", "css:finder"],
+        ["xpath=//a[6]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8501611-1b77-4fa5-baaa-74169d6e69d9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Изменить",
+      "targets": [
+        ["linkText=Изменить", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Изменить')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register/company/7')]", "xpath:href"],
+        ["xpath=//body/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Изменить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "15c7823c-4240-4206-9aa0-216d0183e1d0",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7aeb6495-028a-4fde-b00c-7083ccc201fb",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "TestCo1"
+    }, {
+      "id": "c5090291-6571-453c-ad38-686c31aad2f8",
+      "comment": "",
+      "command": "click",
+      "target": "name=shortname",
+      "targets": [
+        ["name=shortname", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='shortname']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5105f300-bd69-463e-b506-3fc6601ea95f",
+      "comment": "",
+      "command": "type",
+      "target": "name=shortname",
+      "targets": [
+        ["name=shortname", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='shortname']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "TC1"
+    }, {
+      "id": "4935d552-e1a0-4de9-aab1-7e6c384da096",
+      "comment": "",
+      "command": "click",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0543f2c4-6f78-411e-8d5b-b953ba25fa1c",
+      "comment": "",
+      "command": "type",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "test description1"
+    }, {
+      "id": "3cb79b88-64de-4e67-abad-f7f667574c66",
+      "comment": "",
+      "command": "click",
+      "target": "name=address",
+      "targets": [
+        ["name=address", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='address']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b99134c-b69d-4c07-9e7a-53d11e90dd0f",
+      "comment": "",
+      "command": "type",
+      "target": "name=address",
+      "targets": [
+        ["name=address", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='address']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "test address1"
+    }, {
+      "id": "77a33579-2583-4e27-82bb-c689386b408e",
+      "comment": "",
+      "command": "click",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58edcaf9-b70c-401c-baa9-e9b990085eb4",
+      "comment": "",
+      "command": "type",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "26d5b942-c3aa-4a5a-a4c4-88a7a82228c4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "944034b9-df1c-49d7-9c99-d68b03b00f51",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-bold",
+      "targets": [
+        ["css=.text-bold", "css:finder"],
+        ["xpath=//div/div[2]", "xpath:position"]
+      ],
+      "value": "TestCo1"
+    }, {
+      "id": "05ce8ce9-8a85-46db-8d30-fd0bc5619a96",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(4) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(4) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "test description1"
+    }, {
+      "id": "b9450032-6a0b-46d2-87bd-378c57a361f6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(5) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(5) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "test address1"
+    }]
+  }, {
+    "id": "46bc7819-76a0-4083-bdd8-29ffc4358132",
+    "name": "Change Course",
+    "commands": [{
+      "id": "28bc7ffa-1c42-4bb6-88f9-48a557643efd",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c3bb598-280b-409b-afe9-80e3feb7f903",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75a7720f-3ed3-4f9e-a8d7-22f07f38b7ee",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Курсы",
+      "targets": [
+        ["linkText=Курсы", "linkText"],
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Курсы')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/courses')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Курсы')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "026d9f54-9a71-4f98-a06c-e731d8f98935",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(9) > .col-4 > span:nth-child(1)",
+      "targets": [
+        ["css=.row:nth-child(9) > .col-4 > span:nth-child(1)", "css:finder"],
+        ["xpath=//a[9]/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Test Course')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f12d3e7-f396-496c-9d59-907ac69ca458",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Изменить",
+      "targets": [
+        ["linkText=Изменить", "linkText"],
+        ["css=.btn-entity-update", "css:finder"],
+        ["xpath=//a[contains(text(),'Изменить')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register/course/11')]", "xpath:href"],
+        ["xpath=//body/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Изменить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fb98171-3949-41f3-9aab-4e8205d89769",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20a368c5-2b11-4c32-a959-a0f4315d4b12",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=.row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Test Course1"
+    }, {
+      "id": "4e9b15c0-4ddb-4f2d-925c-05a6a278bebe",
+      "comment": "",
+      "command": "click",
+      "target": "name=company",
+      "targets": [
+        ["name=company", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='company']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3d171c4-0864-44b3-855f-af36e3a7c9f8",
+      "comment": "",
+      "command": "select",
+      "target": "name=company",
+      "targets": [],
+      "value": "label=ВМК МГУ"
+    }, {
+      "id": "59160c54-26cb-462d-bf3a-f4d49fea74ac",
+      "comment": "",
+      "command": "click",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "379fcdd3-9175-41e7-b7ad-c38a882c431b",
+      "comment": "",
+      "command": "type",
+      "target": "name=description",
+      "targets": [
+        ["name=description", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='description']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "test description1"
+    }, {
+      "id": "6d672a3b-f048-43b0-8a7d-1017b422e141",
+      "comment": "",
+      "command": "click",
+      "target": "name=plan",
+      "targets": [
+        ["name=plan", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='plan']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e99e9018-8c72-4438-a4c8-d01f95f86da0",
+      "comment": "",
+      "command": "type",
+      "target": "name=plan",
+      "targets": [
+        ["name=plan", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='plan']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "https://someurl1.com"
+    }, {
+      "id": "361eb010-8d52-468f-a0ce-822325a8644e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d5d135c9-8f48-4324-a220-8baa6c54dad4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-bold",
+      "targets": [
+        ["css=.text-bold", "css:finder"],
+        ["xpath=//div/div[2]", "xpath:position"]
+      ],
+      "value": "Test Course1"
+    }, {
+      "id": "b197ec37-2275-4d85-8f90-363e48d07a9a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(4) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(4) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "test description1"
+    }, {
+      "id": "24874f68-893b-4d89-8266-9e2720700815",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(5) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(5) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "Факультет Вычислистельной математики и кибернетики Московского государственного университета им. Ломоносова"
+    }, {
+      "id": "08f455ea-db2f-4dfc-a12b-0e5b723891d7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(6) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(6) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "https://someurl1.com"
+    }]
+  }, {
+    "id": "12e83064-d302-4b23-8478-0b315a4835d3",
+    "name": "Change Student",
+    "commands": [{
+      "id": "d61f7917-9b80-4dce-beab-fd16b0c5826b",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "625ee752-1de5-4b45-a51c-5cd273942d62",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58c7eb78-32fd-49a1-9c3e-8adf33d50923",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Студенты",
+      "targets": [
+        ["linkText=Студенты", "linkText"],
+        ["css=li:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Студенты')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/students')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Студенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7951ade0-4310-43bd-b64d-863baf78ca10",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(7) > .col-2:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(7) > .col-2:nth-child(2)", "css:finder"],
+        ["xpath=//a[7]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6b03004-cfc0-41eb-b76c-361c3d340b4d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Изменить",
+      "targets": [
+        ["linkText=Изменить", "linkText"],
+        ["css=.btn-entity-update", "css:finder"],
+        ["xpath=//a[contains(text(),'Изменить')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register/student/8')]", "xpath:href"],
+        ["xpath=//body/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Изменить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "057d036d-e1f1-47ab-a513-4fcf5c43a31a",
+      "comment": "",
+      "command": "click",
+      "target": "name=lastname",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "322aefb0-427f-482f-afb8-db473b47efc6",
+      "comment": "",
+      "command": "type",
+      "target": "name=lastname",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Тестов1"
+    }, {
+      "id": "c54206f4-9e7d-47bb-897b-05e529d23e28",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b72eb28-d2db-43bb-9da5-b1225942a778",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Тест1"
+    }, {
+      "id": "de0d1a59-f1ce-4c24-abf8-fc2470ac5c2b",
+      "comment": "",
+      "command": "click",
+      "target": "name=fathername",
+      "targets": [
+        ["name=fathername", "name"],
+        ["css=.row:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='fathername']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0a07638-4b41-466e-bc86-0a3332ced292",
+      "comment": "",
+      "command": "type",
+      "target": "name=fathername",
+      "targets": [
+        ["name=fathername", "name"],
+        ["css=.row:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='fathername']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Тестович1"
+    }, {
+      "id": "074f5776-e41b-4a19-832d-46ff96919d15",
+      "comment": "",
+      "command": "click",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6b783ad-4b92-49ae-bf83-bf1239ef4920",
+      "comment": "",
+      "command": "type",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "+71111112"
+    }, {
+      "id": "ba4404c0-1102-40c9-848e-73114d461195",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc3e460c-9872-4a4c-a59a-e4eddee83d42",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-bold",
+      "targets": [
+        ["css=.text-bold", "css:finder"],
+        ["xpath=//div/div[2]", "xpath:position"]
+      ],
+      "value": "Тестов1"
+    }, {
+      "id": "e5e6c81f-b0bd-4afe-82e2-429347563d6d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(4) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(4) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Тест1"
+    }, {
+      "id": "7d079f39-2738-452a-a810-74425c81da4f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(5) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(5) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "Тестович1"
+    }, {
+      "id": "820535bc-046d-458c-a81f-cecaaffc134b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(6) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(6) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "+71111112"
+    }]
+  }, {
+    "id": "58c6807f-b6e6-44b7-aacd-f534221ace46",
+    "name": "Change Teacher",
+    "commands": [{
+      "id": "67b016e7-08bf-4352-bb58-bcbbbdaf24f3",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "97d40f81-afc9-43bd-9e29-432797fa58b6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Преподаватели",
+      "targets": [
+        ["linkText=Преподаватели", "linkText"],
+        ["css=li:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Преподаватели')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/teachers')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Преподаватели')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "679d019d-ed99-4247-90b9-b93c60ba83dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(8) > .col-2:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(8) > .col-2:nth-child(2)", "css:finder"],
+        ["xpath=//a[8]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f174736-77e8-4be8-9167-d768197ec4e0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Изменить",
+      "targets": [
+        ["linkText=Изменить", "linkText"],
+        ["css=.btn-entity-update", "css:finder"],
+        ["xpath=//a[contains(text(),'Изменить')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/register/teacher/11')]", "xpath:href"],
+        ["xpath=//body/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Изменить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f4b3233-5c6b-4b96-8cac-89e59936681d",
+      "comment": "",
+      "command": "click",
+      "target": "name=lastname",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8c82b11-0b95-4664-8de9-17985d122cf9",
+      "comment": "",
+      "command": "type",
+      "target": "name=lastname",
+      "targets": [
+        ["name=lastname", "name"],
+        ["css=.table-header > .row input", "css:finder"],
+        ["xpath=//input[@name='lastname']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Тестов1"
+    }, {
+      "id": "5964da0c-3c3e-45fc-b44b-e64b738b1460",
+      "comment": "",
+      "command": "click",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f839f14-5caf-491c-905b-bc6f5013f110",
+      "comment": "",
+      "command": "type",
+      "target": "name=name",
+      "targets": [
+        ["name=name", "name"],
+        ["css=form > .row:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='name']", "xpath:attributes"],
+        ["xpath=//form/div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Тесталий1"
+    }, {
+      "id": "0c76a8a8-593a-478a-8d7b-d0836c09c7c9",
+      "comment": "",
+      "command": "click",
+      "target": "name=fathername",
+      "targets": [
+        ["name=fathername", "name"],
+        ["css=.row:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='fathername']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b39e3c96-cb52-4f93-b8ab-dc4df9a2d27f",
+      "comment": "",
+      "command": "type",
+      "target": "name=fathername",
+      "targets": [
+        ["name=fathername", "name"],
+        ["css=.row:nth-child(3) input", "css:finder"],
+        ["xpath=//input[@name='fathername']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Тестович1"
+    }, {
+      "id": "408d4d21-7bdf-4592-8402-0ead473cadf4",
+      "comment": "",
+      "command": "click",
+      "target": "name=company",
+      "targets": [
+        ["name=company", "name"],
+        ["css=select", "css:finder"],
+        ["xpath=//select[@name='company']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55ea49da-329f-4ddd-ac3f-5a42545f11b4",
+      "comment": "",
+      "command": "select",
+      "target": "name=company",
+      "targets": [],
+      "value": "label=ВМК МГУ"
+    }, {
+      "id": "a0272805-eeac-4aed-82e6-d6ba5adf248f",
+      "comment": "",
+      "command": "click",
+      "target": "name=education",
+      "targets": [
+        ["name=education", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='education']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "034c6a8c-2ba3-4123-b6a3-89e200b0d89e",
+      "comment": "",
+      "command": "type",
+      "target": "name=education",
+      "targets": [
+        ["name=education", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='education']", "xpath:attributes"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "ТестФак1"
+    }, {
+      "id": "bdb55359-8933-4b86-8313-d174d4357bfd",
+      "comment": "",
+      "command": "click",
+      "target": "name=mail",
+      "targets": [
+        ["name=mail", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='mail']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a94cc2b8-d4c7-4b89-8c89-4e6da5e8ee83",
+      "comment": "",
+      "command": "type",
+      "target": "name=mail",
+      "targets": [
+        ["name=mail", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='mail']", "xpath:attributes"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "testov1@mail.ru"
+    }, {
+      "id": "605074f5-951b-48ee-a0f1-2eeb6fc4b861",
+      "comment": "",
+      "command": "click",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.row:nth-child(7) input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aa66959e-c429-4ebf-8b49-c82e908bd86f",
+      "comment": "",
+      "command": "type",
+      "target": "name=phone",
+      "targets": [
+        ["name=phone", "name"],
+        ["css=.row:nth-child(7) input", "css:finder"],
+        ["xpath=//input[@name='phone']", "xpath:attributes"],
+        ["xpath=//div[7]/div[2]/input", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "0cc179e9-cc54-4cfb-b3dd-2a6c440c232f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Сохранить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "95c1a691-dedd-429b-aa8d-c6c9d569348d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.text-bold",
+      "targets": [
+        ["css=.text-bold", "css:finder"],
+        ["xpath=//div/div[2]", "xpath:position"]
+      ],
+      "value": "Тестов1"
+    }, {
+      "id": "f965574e-ebed-44a6-ba2e-3c9aadf06610",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(4) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(4) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/div[2]", "xpath:position"]
+      ],
+      "value": "Тесталий1"
+    }, {
+      "id": "d6300a01-a543-4264-a89b-41895994e44e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(5) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(5) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[3]/div[2]", "xpath:position"]
+      ],
+      "value": "Тестович1"
+    }, {
+      "id": "6ab40e8a-d03c-44ed-b65e-e01df5396eb2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(6) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(6) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "bc9efd24-b602-4aa8-84b4-55adcfa9069c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(7) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(7) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[5]/div[2]", "xpath:position"]
+      ],
+      "value": "testov1@mail.ru"
+    }, {
+      "id": "967aeea9-029e-4d5f-9dec-c4dc916fcc4b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col > div",
+      "targets": [
+        ["css=.col > div", "css:finder"],
+        ["xpath=//div[6]/div[2]/div", "xpath:position"]
+      ],
+      "value": "Факультет Вычислистельной математики и кибернетики Московского государственного университета им. Ломоносова"
+    }, {
+      "id": "de261b66-1497-4e5e-a236-887eb72ec1d0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.row:nth-child(9) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(9) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[7]/div[2]", "xpath:position"]
+      ],
+      "value": "ТестФак1"
+    }]
+  }, {
+    "id": "2bb4bf49-ec0c-4b3c-862c-56a7a891940f",
+    "name": "Open Relation Manager",
+    "commands": [{
+      "id": "09527304-268b-466e-8c0c-0288471a93b9",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "94c3681a-d43f-4450-a1d4-9e786e30074a",
+      "comment": "",
+      "command": "open",
+      "target": "/course/1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a89d87f9-fa50-4435-b9ba-88496429eb3e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3ce02f14-23bd-4201-b9f0-7b7bbeee964a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Курсы",
+      "targets": [
+        ["linkText=Курсы", "linkText"],
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Курсы')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/courses')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Курсы')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "afd5b439-db2b-482a-9a72-b866258c2208",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .col-4 > span:nth-child(1)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-4 > span:nth-child(1)", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Безопасный Backend')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b1aedb9-82ed-4797-9d8d-163e10dd02b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(10) .btn",
+      "targets": [
+        ["css=div:nth-child(10) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Изменить')])[3]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/relationManager?teacher=-1&course=1')]", "xpath:href"],
+        ["xpath=//div[6]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77b9b569-ba04-4ec8-a7ee-e2a385f5fbc7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Связь Преподаватель-Курс')]", "xpath:innerText"]
+      ],
+      "value": "Связь Преподаватель-Курс"
+    }, {
+      "id": "4e593488-7f22-47d8-953c-835f0ec4d2ae",
+      "comment": "get selected option from course select",
+      "command": "executeScript",
+      "target": "return Array.of(...document.getElementsByName(\"course\")[0].options).filter((opt)=>opt.value==document.getElementsByName(\"course\")[0].value)[0].text",
+      "targets": [],
+      "value": "selected"
+    }, {
+      "id": "17d9e765-040c-4ebf-a136-3ef2000cf2b8",
+      "comment": "",
+      "command": "echo",
+      "target": "${selected}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "060bf42e-b236-4c86-a892-c47c457779a6",
+      "comment": "",
+      "command": "assert",
+      "target": "selected",
+      "targets": [],
+      "value": "Безопасный Backend"
+    }, {
+      "id": "c9ca4d80-e9a1-4456-af12-8095091d6694",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Курсы",
+      "targets": [
+        ["linkText=Курсы", "linkText"],
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Курсы')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/courses')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Курсы')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da611f50-f3d2-4cd8-8aba-95ce2c61b449",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(1) > .col-4 > span:nth-child(1)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col-4 > span:nth-child(1)", "css:finder"],
+        ["xpath=//span", "xpath:position"],
+        ["xpath=//span[contains(.,'Безопасный Backend')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "06b88a37-d7d4-468f-89bf-5284b4636095",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(12) .btn",
+      "targets": [
+        ["css=div:nth-child(12) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Изменить')])[4]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/relationManager?student=-1&course=1')]", "xpath:href"],
+        ["xpath=//div[7]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c4bed5a-b80a-44c3-96ad-406ce239d2a4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Связь Преподаватель-Курс')]", "xpath:innerText"]
+      ],
+      "value": "Связь Студент-Курс"
+    }, {
+      "id": "3d3356d1-d71d-474d-b5ed-073c4e458543",
+      "comment": "get selected option from course select",
+      "command": "executeScript",
+      "target": "return document.getElementsByName(\"course\")[0][document.getElementsByName(\"course\")[0].value].text",
+      "targets": [],
+      "value": "selected"
+    }, {
+      "id": "90896474-f9a0-40f8-bcd0-cf97af62815e",
+      "comment": "",
+      "command": "assert",
+      "target": "selected",
+      "targets": [],
+      "value": "Безопасный Backend"
+    }, {
+      "id": "825893a7-d9d5-432e-a126-4331f47715b1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Курсы",
+      "targets": [
+        ["linkText=Курсы", "linkText"],
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Курсы')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/courses')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Курсы')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02f556c7-16b1-4e50-8303-937400a24db7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Преподаватели",
+      "targets": [
+        ["linkText=Преподаватели", "linkText"],
+        ["css=li:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Преподаватели')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/teachers')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Преподаватели')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "77f417e0-6e5d-423b-92e4-3d43dbb87847",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row-href:nth-child(1) > .col-2:nth-child(2)",
+      "targets": [
+        ["css=.row-href:nth-child(1) > .col-2:nth-child(2)", "css:finder"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d360cab-4553-4b4b-a2de-194d53e18836",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-row > .btn",
+      "targets": [
+        ["css=.header-row > .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Изменить')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/relationManager?course=-1&teacher=2')]", "xpath:href"],
+        ["xpath=//div[8]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bb6eb75-c42f-4cf6-a7bb-cc3af6812f99",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Связь Преподаватель-Курс')]", "xpath:innerText"]
+      ],
+      "value": "Связь Преподаватель-Курс"
+    }, {
+      "id": "57cd7b42-230f-48e6-be51-aa643ac179d9",
+      "comment": "get selected option from teacher select",
+      "command": "executeScript",
+      "target": "return Array.of(...document.getElementsByName(\"teacher\")[0].options).filter((opt)=>opt.value==document.getElementsByName(\"teacher\")[0].value)[0].text",
+      "targets": [],
+      "value": "selected"
+    }, {
+      "id": "c121ccc0-3187-4ea0-9fb7-e3a375322ffd",
+      "comment": "",
+      "command": "echo",
+      "target": "${selected}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "92e23470-f655-442d-b2d6-14228067ddbc",
+      "comment": "",
+      "command": "assert",
+      "target": "selected",
+      "targets": [],
+      "value": "Капустин Н."
+    }, {
+      "id": "aaf069c3-fefe-4701-a3a5-7e9a1f489072",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Студенты",
+      "targets": [
+        ["linkText=Студенты", "linkText"],
+        ["css=li:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Студенты')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/students')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Студенты')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d582a53a-1cac-4e98-80cf-3acaa568593a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row-href:nth-child(1) > .col-2:nth-child(3)",
+      "targets": [
+        ["css=.row-href:nth-child(1) > .col-2:nth-child(3)", "css:finder"],
+        ["xpath=//a/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9240ab73-c1c8-469b-b0fd-476393de72e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.header-row > .btn",
+      "targets": [
+        ["css=.header-row > .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Изменить')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/relationManager?course=-1&student=1')]", "xpath:href"],
+        ["xpath=//div[5]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ec93891-ac2c-42e5-9517-9a4549604c3f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Связь Преподаватель-Курс')]", "xpath:innerText"]
+      ],
+      "value": "Связь Студент-Курс"
+    }, {
+      "id": "141b7187-a3cf-4937-b7a8-54c6f41f4398",
+      "comment": "get selected option from teacher select",
+      "command": "executeScript",
+      "target": "return Array.of(...document.getElementsByName(\"student\")[0].options).filter((opt)=>opt.value==document.getElementsByName(\"student\")[0].value)[0].text",
+      "targets": [],
+      "value": "selected"
+    }, {
+      "id": "7d9b00cc-56be-4735-9ef3-b1fa8fd03f0c",
+      "comment": "",
+      "command": "assert",
+      "target": "selected",
+      "targets": [],
+      "value": "Дударенко Д."
+    }]
+  }, {
+    "id": "0449cd56-b1af-4abc-a35e-2ac8e72ae4af",
+    "name": "Advanced Add Relation Delete Relation",
+    "commands": [{
+      "id": "16db2902-a73e-49e7-b31e-33f6a1d80f0e",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a46e86de-07db-4ece-9e83-e99d9f8f84f9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5274cf4-a99b-45f7-9ca3-eb8d5e32e69f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(9) > .col-4",
+      "targets": [
+        ["css=.row:nth-child(9) > .col-4", "css:finder"],
+        ["xpath=//a[9]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92b5fd79-6ea0-416d-8a96-60323d736de7",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(10) .btn",
+      "targets": [
+        ["css=div:nth-child(10) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Изменить')])[3]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/relationManager?teacher=-1&course=11')]", "xpath:href"],
+        ["xpath=//div[6]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "082512f5-0f18-4951-b6a0-538ce657cec0",
+      "comment": "",
+      "command": "click",
+      "target": "name=teacher",
+      "targets": [
+        ["name=teacher", "name"],
+        ["css=div:nth-child(2) > .mt-4:nth-child(1)", "css:finder"],
+        ["xpath=//select[@name='teacher']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5889311a-4260-4a43-aa34-79816f3c107f",
+      "comment": "",
+      "command": "select",
+      "target": "name=teacher",
+      "targets": [],
+      "value": "label=Тестов1 Т. Т."
+    }, {
+      "id": "124c7211-896a-4a2e-9f56-b33fe0f2b7c7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//div[@onclick='createRelation()']", "xpath:attributes"],
+        ["xpath=//div[@id='create']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac01a453-273e-4518-862f-5c0377fd8aae",
+      "comment": "",
+      "command": "pause",
+      "target": "3200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef97ba3e-6639-48a1-bba0-8f9695b6ebaa",
+      "comment": "",
+      "command": "click",
+      "target": "name=teacher",
+      "targets": [
+        ["name=teacher", "name"],
+        ["css=div:nth-child(2) > .mt-4:nth-child(1)", "css:finder"],
+        ["xpath=//select[@name='teacher']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e0d12c4-90a8-456b-bdb1-0529f75e435c",
+      "comment": "",
+      "command": "select",
+      "target": "name=teacher",
+      "targets": [],
+      "value": "label=Петров И."
+    }, {
+      "id": "95c0bd3c-deff-4482-8408-c8a791ae0f60",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//div[@onclick='createRelation()']", "xpath:attributes"],
+        ["xpath=//div[@id='create']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e1f1cf7-e64c-4360-adcc-9b67c094827e",
+      "comment": "",
+      "command": "pause",
+      "target": "3200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "deb57fab-2c07-4556-b6ab-c391751c5310",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6443db9-e747-4364-ab27-8242f932d64a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(9) > .col-4",
+      "targets": [
+        ["css=.row:nth-child(9) > .col-4", "css:finder"],
+        ["xpath=//a[9]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "381ced3b-32a7-4ca0-a0d3-e2960ae61f18",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#teachers > .row:nth-child(3) > .col:nth-child(2)",
+      "targets": [
+        ["css=#teachers > .row:nth-child(3) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='teachers']/div[3]/div", "xpath:idRelative"],
+        ["xpath=//div[6]/div[3]/div", "xpath:position"]
+      ],
+      "value": "Тестов1"
+    }, {
+      "id": "cb13267a-8440-4bc2-a535-a5c45f36084a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#teachers > .row:nth-child(4) > .col:nth-child(2)",
+      "targets": [
+        ["css=#teachers > .row:nth-child(4) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='teachers']/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[6]/div[4]/div", "xpath:position"]
+      ],
+      "value": "Петров"
+    }, {
+      "id": "1775a6d3-8c89-41d5-b17a-3174352ad9d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(10) .btn",
+      "targets": [
+        ["css=div:nth-child(10) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Изменить')])[3]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/relationManager?teacher=-1&course=11')]", "xpath:href"],
+        ["xpath=//div[6]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c21bde80-825c-4ae3-b696-9136e59030d2",
+      "comment": "",
+      "command": "click",
+      "target": "name=teacher",
+      "targets": [
+        ["name=teacher", "name"],
+        ["css=div:nth-child(2) > .mt-4:nth-child(1)", "css:finder"],
+        ["xpath=//select[@name='teacher']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "79b2f975-99c5-4770-ba16-b7d3febe7c97",
+      "comment": "",
+      "command": "select",
+      "target": "name=teacher",
+      "targets": [],
+      "value": "label=Тестов1 Т. Т."
+    }, {
+      "id": "45be7b91-104e-4188-9f52-3131ed85a457",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//div[@onclick='removeRelation()']", "xpath:attributes"],
+        ["xpath=//div[@id='del']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77e9f2d5-6835-4de0-bfe2-b2b266d5805c",
+      "comment": "",
+      "command": "pause",
+      "target": "3200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4f1b0a7e-5b24-478a-99c4-427758ae05ad",
+      "comment": "",
+      "command": "open",
+      "target": "/courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "113323d7-f272-4fb4-a638-60a0c8edc866",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(9) > .col-4",
+      "targets": [
+        ["css=.row:nth-child(9) > .col-4", "css:finder"],
+        ["xpath=//a[9]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16ab15f0-f5df-46a8-99ab-c3c8d8e09242",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div:nth-child(10) > .row > .col:nth-child(2)",
+      "targets": [
+        ["css=div:nth-child(10) > .row > .col:nth-child(2)", "css:finder"],
+        ["xpath=//div[6]/div[3]/div", "xpath:position"]
+      ],
+      "value": "Петров"
+    }, {
+      "id": "b3bf6d8f-71cb-470f-9a14-662e7e4ca543",
+      "comment": "get rows in teachers block(teachers count + 2)",
+      "command": "executeScript",
+      "target": "return document.getElementById(\"teachers\").children.length",
+      "targets": [],
+      "value": "rows"
+    }, {
+      "id": "d3b57af2-62fd-4791-9615-13df043c0b30",
+      "comment": "",
+      "command": "assert",
+      "target": "rows",
+      "targets": [],
+      "value": "3"
+    }]
+  }, {
+    "id": "5f3141d5-0005-4173-95a3-c6341fab2b21",
+    "name": "Advanced Delete Relation Add Relation",
+    "commands": [{
+      "id": "ba81c420-3b66-4534-99af-87e86fadbda4",
+      "comment": "",
+      "command": "open",
+      "target": "/course/8",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "71b3a6a3-7086-4fe3-8a36-5ce3bbeb7ef5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10f38016-2650-47ea-bd14-25bd761be420",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Курсы",
+      "targets": [
+        ["linkText=Курсы", "linkText"],
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Курсы')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/courses')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Курсы')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e62f7e4d-289d-4dc2-b3a5-f4214cd5ca98",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(8) > .col-4 > span:nth-child(1)",
+      "targets": [
+        ["css=.row:nth-child(8) > .col-4 > span:nth-child(1)", "css:finder"],
+        ["xpath=//a[8]/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Язык Rust')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a01f62f-36b8-4ac9-9366-d1db0191cb05",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(12) .btn",
+      "targets": [
+        ["css=div:nth-child(12) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Изменить')])[4]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/relationManager?student=-1&course=8')]", "xpath:href"],
+        ["xpath=//div[7]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a19bc420-564c-4d08-aad5-49de742816ea",
+      "comment": "",
+      "command": "click",
+      "target": "name=student",
+      "targets": [
+        ["name=student", "name"],
+        ["css=div:nth-child(2) > .mt-4:nth-child(1)", "css:finder"],
+        ["xpath=//select[@name='student']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75a5d30e-6fc1-41bf-a01f-510c7556bc1b",
+      "comment": "",
+      "command": "select",
+      "target": "name=student",
+      "targets": [],
+      "value": "label=Межуев Т."
+    }, {
+      "id": "f298935c-0d7e-4c90-b53c-8d33b856a5ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-danger",
+      "targets": [
+        ["css=.btn-danger", "css:finder"],
+        ["xpath=//div[@onclick='removeRelation()']", "xpath:attributes"],
+        ["xpath=//div[@id='del']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc373008-5e4b-4687-8ed6-06674533feb1",
+      "comment": "",
+      "command": "pause",
+      "target": "3200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd2b8c99-e724-40b8-88d9-d79b44916e00",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Курсы",
+      "targets": [
+        ["linkText=Курсы", "linkText"],
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Курсы')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/courses')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Курсы')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "917f214c-ac22-45f7-957a-f5b338619d61",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(8) > .col-4 > span:nth-child(1)",
+      "targets": [
+        ["css=.row:nth-child(8) > .col-4 > span:nth-child(1)", "css:finder"],
+        ["xpath=//a[8]/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Язык Rust')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f0a03e0-1942-4eb6-970a-6dd5abeed6ba",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col:nth-child(1) .mt-2:nth-child(1) > a",
+      "targets": [
+        ["css=.col:nth-child(1) .mt-2:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Митрофанов  А.')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/student/5')]", "xpath:href"],
+        ["xpath=//div[2]/div/ul/li/a", "xpath:position"]
+      ],
+      "value": "Митрофанов А."
+    }, {
+      "id": "105dc36c-8a52-4aaf-8b4b-0db21db48898",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(12) .btn",
+      "targets": [
+        ["css=div:nth-child(12) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Изменить')])[4]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/relationManager?student=-1&course=8')]", "xpath:href"],
+        ["xpath=//div[7]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02cd6175-e334-4dde-a82e-c114120af683",
+      "comment": "",
+      "command": "select",
+      "target": "name=student",
+      "targets": [
+        ["name=student", "name"],
+        ["css=div:nth-child(2) > .mt-4", "css:finder"],
+        ["xpath=//select[@name='student']", "xpath:attributes"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd75e148-78a4-4be8-bba5-9810f596c578",
+      "comment": "",
+      "command": "select",
+      "target": "name=student",
+      "targets": [],
+      "value": "label=Межуев Т."
+    }, {
+      "id": "89732b9f-74fc-41c9-a237-682338c39c78",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-success",
+      "targets": [
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//div[@onclick='createRelation()']", "xpath:attributes"],
+        ["xpath=//div[@id='create']/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e497c038-a9cf-490b-8fd5-3555b6231270",
+      "comment": "",
+      "command": "pause",
+      "target": "3200",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c820680a-2581-4a37-9e92-310f2d6f12e2",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Курсы",
+      "targets": [
+        ["linkText=Курсы", "linkText"],
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Курсы')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/courses')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Курсы')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2da69787-c95e-4724-9fe6-8a9d2e679905",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(8) > .col-4 > span:nth-child(1)",
+      "targets": [
+        ["css=.row:nth-child(8) > .col-4 > span:nth-child(1)", "css:finder"],
+        ["xpath=//a[8]/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Язык Rust')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a5b58b7-757b-4d53-a4f9-923e58238a31",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col:nth-child(2) .mt-2:nth-child(2) > a",
+      "targets": [
+        ["css=.col:nth-child(2) .mt-2:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Межуев  Т.')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/student/4')]", "xpath:href"],
+        ["xpath=//div[2]/ul/li[2]/a", "xpath:position"]
+      ],
+      "value": "Межуев Т."
+    }]
+  }, {
+    "id": "762d5c10-89bc-479d-bf0c-5451bc54c16f",
+    "name": "Course Add Schedule Delete Schedule",
+    "commands": [{
+      "id": "7cd29135-b40f-4f94-8b0d-8401be9aa411",
+      "comment": "",
+      "command": "open",
+      "target": "/scheduleManager?course=11",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03c851f1-e7ff-4c41-b03b-72e7e0c802d0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1637x951",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2216aee-ccd2-4aa7-a475-651dbb80a861",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Курсы",
+      "targets": [
+        ["linkText=Курсы", "linkText"],
+        ["css=li:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Курсы')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '/courses')])[2]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Курсы')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "191d742a-8865-416d-b558-3f5f79d1a113",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(9) > .col-4",
+      "targets": [
+        ["css=.row:nth-child(9) > .col-4", "css:finder"],
+        ["xpath=//a[9]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da71b249-dec8-476d-b2dc-44ded4f14ebc",
+      "comment": "",
+      "command": "click",
+      "target": "css=div:nth-child(8) .btn",
+      "targets": [
+        ["css=div:nth-child(8) .btn", "css:finder"],
+        ["xpath=(//a[contains(text(),'Изменить')])[2]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/scheduleManager?course=11')]", "xpath:href"],
+        ["xpath=//div[5]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a421332f-a4b6-4034-b04c-a31d54b4db30",
+      "comment": "",
+      "command": "click",
+      "target": "name=classroom",
+      "targets": [
+        ["name=classroom", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='classroom']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96490435-f750-4b43-9b43-de6c9d82adca",
+      "comment": "",
+      "command": "type",
+      "target": "name=classroom",
+      "targets": [
+        ["name=classroom", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='classroom']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "111"
+    }, {
+      "id": "bb2bc740-0edc-4994-867d-74e43cd3e309",
+      "comment": "",
+      "command": "click",
+      "target": "name=start_time",
+      "targets": [
+        ["name=start_time", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='start_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[5]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "276b9578-6e5d-4fbc-aa2e-b38be49907af",
+      "comment": "",
+      "command": "type",
+      "target": "name=start_time",
+      "targets": [
+        ["name=start_time", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='start_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[5]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "10:00"
+    }, {
+      "id": "0c78d291-11be-453d-ae2f-943c0820d803",
+      "comment": "",
+      "command": "click",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "097713e9-fac6-437c-820e-fddc0b383f99",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "12:00"
+    }, {
+      "id": "0f5f8032-98d4-4ab2-8402-7ffcd21148be",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2855b7d4-9a15-430e-8cde-63b4e51caaf8",
+      "comment": "",
+      "command": "click",
+      "target": "name=dayOfWeek",
+      "targets": [
+        ["name=dayOfWeek", "name"],
+        ["css=.row:nth-child(2) select", "css:finder"],
+        ["xpath=//select[@name='dayOfWeek']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "50cf18cf-539d-4560-a9ce-6defd9eb767d",
+      "comment": "",
+      "command": "click",
+      "target": "name=dayOfWeek",
+      "targets": [
+        ["name=dayOfWeek", "name"],
+        ["css=.row:nth-child(2) select", "css:finder"],
+        ["xpath=//select[@name='dayOfWeek']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2edcd83c-b325-4966-bca1-98a5180ecc73",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "name=dayOfWeek",
+      "targets": [
+        ["name=dayOfWeek", "name"],
+        ["css=.row:nth-child(2) select", "css:finder"],
+        ["xpath=//select[@name='dayOfWeek']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b1341da9-40e8-4015-860e-2a7e704a0a4f",
+      "comment": "",
+      "command": "click",
+      "target": "name=dayOfWeek",
+      "targets": [
+        ["name=dayOfWeek", "name"],
+        ["css=.row:nth-child(2) select", "css:finder"],
+        ["xpath=//select[@name='dayOfWeek']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[2]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57d70b77-ebe2-4086-a0b9-354be2d8e5eb",
+      "comment": "",
+      "command": "select",
+      "target": "name=dayOfWeek",
+      "targets": [],
+      "value": "label=Среда"
+    }, {
+      "id": "8297d9d9-8e8c-43f5-a8ee-a0f25ce1de94",
+      "comment": "",
+      "command": "click",
+      "target": "name=teachCour",
+      "targets": [
+        ["name=teachCour", "name"],
+        ["css=.row:nth-child(3) select", "css:finder"],
+        ["xpath=//select[@name='teachCour']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[3]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f7e2457-ce8c-4784-8d30-c8eb8b61249a",
+      "comment": "",
+      "command": "click",
+      "target": "name=teachCour",
+      "targets": [
+        ["name=teachCour", "name"],
+        ["css=.row:nth-child(3) select", "css:finder"],
+        ["xpath=//select[@name='teachCour']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[3]/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9fe6afc2-eab2-48d0-9a9a-46d7dccf3573",
+      "comment": "",
+      "command": "click",
+      "target": "name=classroom",
+      "targets": [
+        ["name=classroom", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='classroom']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af4de18b-46f3-46bd-89e7-7294944626d6",
+      "comment": "",
+      "command": "type",
+      "target": "name=classroom",
+      "targets": [
+        ["name=classroom", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='classroom']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "123"
+    }, {
+      "id": "e73e0bc9-7317-4fe6-8525-7eaedadcb45a",
+      "comment": "",
+      "command": "click",
+      "target": "name=start_time",
+      "targets": [
+        ["name=start_time", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='start_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[5]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42d4f066-68a8-40ae-b2a5-2f932aa73f7f",
+      "comment": "",
+      "command": "type",
+      "target": "name=start_time",
+      "targets": [
+        ["name=start_time", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='start_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[5]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "11:00"
+    }, {
+      "id": "61a41283-11d2-4211-aac5-e1cd92965b82",
+      "comment": "",
+      "command": "click",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b31574ca-d6de-4b98-87a6-76093a750964",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "13:00"
+    }, {
+      "id": "0bb23a7c-38be-48b5-9562-4566aaa3f66b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dff169d7-1563-44e2-b2a6-df4652a09312",
+      "comment": "",
+      "command": "click",
+      "target": "name=classroom",
+      "targets": [
+        ["name=classroom", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='classroom']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "660134e4-d36c-4ee6-9748-b6699ba0be2d",
+      "comment": "",
+      "command": "type",
+      "target": "name=classroom",
+      "targets": [
+        ["name=classroom", "name"],
+        ["css=.row:nth-child(4) input", "css:finder"],
+        ["xpath=//input[@name='classroom']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[4]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/input", "xpath:position"]
+      ],
+      "value": "222"
+    }, {
+      "id": "16eabf32-2f59-4f08-b75b-0efde6cf02cc",
+      "comment": "",
+      "command": "click",
+      "target": "name=start_time",
+      "targets": [
+        ["name=start_time", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='start_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[5]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a150ac9-95fb-4f69-b1ad-dbbf0990b230",
+      "comment": "",
+      "command": "click",
+      "target": "name=start_time",
+      "targets": [
+        ["name=start_time", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='start_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[5]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "241896df-269f-4cf3-b917-4ef64fb54373",
+      "comment": "",
+      "command": "click",
+      "target": "name=start_time",
+      "targets": [
+        ["name=start_time", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='start_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[5]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "adbe8f26-cff1-4468-830e-121571b5b0cb",
+      "comment": "",
+      "command": "type",
+      "target": "name=start_time",
+      "targets": [
+        ["name=start_time", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='start_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[5]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "13:01"
+    }, {
+      "id": "ee75206f-279e-44f0-a40f-d40b3938daa4",
+      "comment": "",
+      "command": "type",
+      "target": "name=start_time",
+      "targets": [
+        ["name=start_time", "name"],
+        ["css=.row:nth-child(5) input", "css:finder"],
+        ["xpath=//input[@name='start_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[5]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div[2]/input", "xpath:position"]
+      ],
+      "value": "13:15"
+    }, {
+      "id": "6455ca60-8ec4-4070-9b46-1597703cbf2f",
+      "comment": "",
+      "command": "click",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52ca418c-74c0-400a-b153-b7261fb3099c",
+      "comment": "",
+      "command": "click",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c8ce945-e8de-4d6a-98f6-ad0c3b90cc01",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "16:04"
+    }, {
+      "id": "a996d796-0164-4e84-a455-e2ce50ae91d3",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "16:45"
+    }, {
+      "id": "b6af53cc-bc14-4599-b7c2-3ea856ad04e3",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "16:56"
+    }, {
+      "id": "f151c374-0063-4501-a097-0867450ad3d9",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "645eed06-555f-4daf-8c99-d1b25aa3d654",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "16:05"
+    }, {
+      "id": "aacef1b1-a981-4742-8595-9621db092a9e",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0aa8999c-5942-46cc-9ae7-2064d1dbacae",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "16:04"
+    }, {
+      "id": "0f8c35bb-39e1-478b-bd32-845094b8c56e",
+      "comment": "",
+      "command": "type",
+      "target": "name=end_time",
+      "targets": [
+        ["name=end_time", "name"],
+        ["css=.row:nth-child(6) input", "css:finder"],
+        ["xpath=//input[@name='end_time']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/div[6]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div[2]/input", "xpath:position"]
+      ],
+      "value": "16:45"
+    }, {
+      "id": "dba9d887-3975-4339-a8a2-d89e39e3ffc1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='new-sched']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Добавить')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4126f1f1-1b4d-467b-a7a2-9b05bb593739",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col:nth-child(2) > .sched-el:nth-child(1) > span:nth-child(1)",
+      "targets": [
+        ["css=.col:nth-child(2) > .sched-el:nth-child(1) > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Петров')]", "xpath:innerText"]
+      ],
+      "value": "Петров"
+    }, {
+      "id": "9f537412-77de-41f9-8c18-1ea4ec0699dc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sched-el:nth-child(2) > span:nth-child(1)",
+      "targets": [
+        ["css=.sched-el:nth-child(2) > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[2]/span", "xpath:position"]
+      ],
+      "value": "Петров"
+    }, {
+      "id": "352ea815-06a0-47ff-a69b-e2926347dc46",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col:nth-child(4) span:nth-child(1)",
+      "targets": [
+        ["css=.col:nth-child(4) span:nth-child(1)", "css:finder"],
+        ["xpath=//div[2]/div[4]/div/span", "xpath:position"]
+      ],
+      "value": "Петров"
+    }, {
+      "id": "5294a810-706f-4f4a-871e-f5c450fa3a3c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col:nth-child(2) > .sched-el:nth-child(1) > span:nth-child(2)",
+      "targets": [
+        ["css=.col:nth-child(2) > .sched-el:nth-child(1) > span:nth-child(2)", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'111')]", "xpath:innerText"]
+      ],
+      "value": "111"
+    }, {
+      "id": "b26b52de-0fa4-4fa9-a252-45a510d4d4fb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sched-el:nth-child(2) > span:nth-child(2)",
+      "targets": [
+        ["css=.sched-el:nth-child(2) > span:nth-child(2)", "css:finder"],
+        ["xpath=//div[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'222')]", "xpath:innerText"]
+      ],
+      "value": "222"
+    }, {
+      "id": "569bf741-62c3-4414-8fa3-8983b9228207",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col:nth-child(4) span:nth-child(2)",
+      "targets": [
+        ["css=.col:nth-child(4) span:nth-child(2)", "css:finder"],
+        ["xpath=//div[4]/div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'123')]", "xpath:innerText"]
+      ],
+      "value": "123"
+    }, {
+      "id": "7ba6046e-ae3c-4ad2-ba1d-738745c7ab0d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col:nth-child(2) > .sched-el:nth-child(1) > div:nth-child(3)",
+      "targets": [
+        ["css=.col:nth-child(2) > .sched-el:nth-child(1) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[2]/div[2]/div/div", "xpath:position"]
+      ],
+      "value": "(10:00 - 12:00)"
+    }, {
+      "id": "7b523257-470d-4a8b-aeee-10829db0f6e5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.sched-el:nth-child(2) > div:nth-child(3)",
+      "targets": [
+        ["css=.sched-el:nth-child(2) > div:nth-child(3)", "css:finder"],
+        ["xpath=//div[2]/div[2]/div[2]/div", "xpath:position"]
+      ],
+      "value": "(13:15 - 16:45)"
+    }, {
+      "id": "8f911b65-58fe-4cb7-9a29-0333b0d3d0cd",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col:nth-child(4) div:nth-child(3)",
+      "targets": [
+        ["css=.col:nth-child(4) div:nth-child(3)", "css:finder"],
+        ["xpath=//div[2]/div[4]/div/div", "xpath:position"]
+      ],
+      "value": "(11:00 - 13:00)"
+    }, {
+      "id": "56cfc7d9-0c47-464d-b9d5-c6f49acba4be",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(2) > .sched-el:nth-child(1) .d-flex",
+      "targets": [
+        ["css=.col:nth-child(2) > .sched-el:nth-child(1) .d-flex", "css:finder"],
+        ["xpath=//div[@onclick='delSched(15)']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c47e630-1b0a-4e85-8fcd-3fcaf2a93b4f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col:nth-child(2) span:nth-child(2)",
+      "targets": [
+        ["css=.col:nth-child(2) span:nth-child(2)", "css:finder"],
+        ["xpath=//span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'222')]", "xpath:innerText"]
+      ],
+      "value": "222"
+    }, {
+      "id": "049a1ad6-3225-4a46-92fa-a016d755adf2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col:nth-child(4) span:nth-child(2)",
+      "targets": [
+        ["css=.col:nth-child(4) span:nth-child(2)", "css:finder"],
+        ["xpath=//div[4]/div/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'123')]", "xpath:innerText"]
+      ],
+      "value": "123"
+    }, {
+      "id": "e65949c8-49f7-4f4c-abe9-456c0daccc01",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(2) .d-flex",
+      "targets": [
+        ["css=.col:nth-child(2) .d-flex", "css:finder"],
+        ["xpath=//div[@onclick='delSched(20)']", "xpath:attributes"],
+        ["xpath=//div[2]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6baec20f-2d6a-4b59-9bbe-d367d5b82c18",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col:nth-child(4) .d-flex",
+      "targets": [
+        ["css=.col:nth-child(4) .d-flex", "css:finder"],
+        ["xpath=//div[@onclick='delSched(19)']", "xpath:attributes"],
+        ["xpath=//div[2]/div[4]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "747ca264-e789-4379-9b35-a7f1d27ab757",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["893fa379-5066-4150-a92c-92140a35cf69"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
