@@ -14,6 +14,7 @@
 <body>
 <div class="container">
   <h1 th:text="'Карточка студента ' + ${student.id}"></h1>
+  <a class="btn btn-primary btn-entity-update" th:href="'/register/student/' + ${student.id}">Изменить</a>
   <div class="table-header">
     <div class="row">
       <div class="col col-id">Фамилия:</div>
