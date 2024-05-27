@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule </title>
+    <!--    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.2/examples/sign-in/signin.css" crossorigin="anonymous"/>-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <link rel="stylesheet" th:href="@{/styles/common.css}"/>
+
+</head>
+<body>
+<header th:insert="~{fragments/header :: header}"></header>
+<div class="container mt-5">
+    <h1>Расписание курса</h1>
+    <!--  <a class="btn btn-primary btn-entity-update" th:href="'/register/course/' + ${course.id}">Изменить</a>-->
+    <div class="table-header">
+        <div class="row">
+            <div class="col col-id">Название:</div>
+            <div class="col text-bold" th:text="${course.name}">-</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-id">Компания:</div>
+        <div class="col">
+            <a th:if="${course.company}" th:text="${course.company.name}"
+               th:href="'/company/' + ${course.company.id}">
+                -
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-id">План курса:</div>
+        <div class="col" th:text="${course.plan}">-</div>
+    </div>
+    <hr/>
+    <div class="">
+        <h3>Расписание:</h3>
+        <div class="table-header">
+            <div class="row">
+                <div class="col col-id">День недели</div>
+                <div class="col">Понедельник</div>
+                <div class="col">Вторник</div>
+                <div class="col">Среда</div>
+                <div class="col">Четверг</div>
+                <div class="col">Пятница</div>
+                <div class="col">Суббота</div>
+                <!--                <div class="col">Воскресен</div>-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col col-id">Расписание</div>
+            <div class="col">
+                <div class="sched-el mb-2 pb-1" th:each="schedule : ${Понедельник}">
+                    <span th:text="${schedule.teachCour.teacher.lastname}"></span>
+                    <span th:text="${schedule.classroom}"></span>
+                    <div th:text="${schedule.getInterval()}"></div>
+                    <div class="btn btn-secondary w-100">
+                        <div th:onclick="'delSched(' + ${schedule.id} + ')'"
+                             class="d-flex align-items-center mb-2 mb-lg-0 justify-content-center">
+                            <img width="20" height="16"
+                                 src="https://www.svgrepo.com/show/529255/trash-bin-minimalistic-2.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sched-el mb-2 pb-1" th:each="schedule : ${Вторник}">
+                    <span th:text="${schedule.teachCour.teacher.lastname}"></span>
+                    <span th:text="${schedule.classroom}"></span>
+                    <div th:text="${schedule.getInterval()}"></div>
+                    <div class="btn btn-secondary w-100">
+                        <div th:onclick="'delSched(' + ${schedule.id} + ')'"
+                             class="d-flex align-items-center mb-2 mb-lg-0 justify-content-center">
+                            <img width="20" height="16"
+                                 src="https://www.svgrepo.com/show/529255/trash-bin-minimalistic-2.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sched-el mb-2 pb-1" th:each="schedule : ${Среда}">
+                    <span th:text="${schedule.teachCour.teacher.lastname}"></span>
+                    <span th:text="${schedule.classroom}"></span>
+                    <div th:text="${schedule.getInterval()}"></div>
+                    <div class="btn btn-secondary w-100">
+                        <div th:onclick="'delSched(' + ${schedule.id} + ')'"
+                             class="d-flex align-items-center mb-2 mb-lg-0 justify-content-center">
+                            <img width="20" height="16"
+                                 src="https://www.svgrepo.com/show/529255/trash-bin-minimalistic-2.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sched-el mb-2 pb-1" th:each="schedule : ${Четверг}">
+                    <span th:text="${schedule.teachCour.teacher.lastname}"></span>
+                    <span th:text="${schedule.classroom}"></span>
+                    <div th:text="${schedule.getInterval()}"></div>
+                    <div class="btn btn-secondary w-100">
+                        <div th:onclick="'delSched(' + ${schedule.id} + ')'"
+                             class="d-flex align-items-center mb-2 mb-lg-0 justify-content-center">
+                            <img width="20" height="16"
+                                 src="https://www.svgrepo.com/show/529255/trash-bin-minimalistic-2.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="sched-el mb-2 pb-1" th:each="schedule : ${Пятница}">
+                    <span th:text="${schedule.teachCour.teacher.lastname}"></span>
+                    <span th:text="${schedule.classroom}"></span>
+                    <div th:text="${schedule.getInterval()}"></div>
+                    <div class="btn btn-secondary w-100">
+                        <div th:onclick="'delSched(' + ${schedule.id} + ')'"
+                             class="d-flex align-items-center mb-2 mb-lg-0 justify-content-center">
+                            <img width="20" height="16"
+                                 src="https://www.svgrepo.com/show/529255/trash-bin-minimalistic-2.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="sched-el mb-2 pb-1" th:each="schedule : ${Суббота}">
+                    <span th:text="${schedule.teachCour.teacher.lastname}"></span>
+                    <span th:text="${schedule.classroom}"></span>
+                    <div th:text="${schedule.getInterval()}"></div>
+                    <div class="btn btn-secondary w-100">
+                        <div th:onclick="'delSched(' + ${schedule.id} + ')'"
+                             class="d-flex align-items-center mb-2 mb-lg-0 justify-content-center">
+                            <img width="20" height="16"
+                                 src="https://www.svgrepo.com/show/529255/trash-bin-minimalistic-2.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <h3>Добавить</h3>
+        <form id="new-sched" onsubmit="addSched(event)" method="POST">
+            <div class="table-header">
+                <div th:if="${id}" hidden>
+                    <input type="text" name="id" th:value="${id}">
+                </div>
+                <div class="row">
+                    <div class="col col-id">Название:</div>
+                    <div class="col col-form-control">
+                        <input disabled type="text" name="name" th:value="${course.name}">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-id">День недели:</div>
+                <div class="col col-form-control">
+                    <!--        <input type="text" name="shortname" th:value="${shortname}">-->
+                    <select name="dayOfWeek">
+                        <option>Понедельник</option>
+                        <option>Вторник</option>
+                        <option>Среда</option>
+                        <option>Четверг</option>
+                        <option>Пятница</option>
+                        <option>Суббота</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-id">Преподаватель:</div>
+                <div class="col col-form-control">
+                    <!--        <input type="text" name="shortname" th:value="${shortname}">-->
+                    <select name="teachCour">
+                        <option th:each="t2c : ${teachers}"
+                                th:text="${t2c.teacher.getInitials()}" th:value="${t2c.id}">
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-id">Аудитория:</div>
+                <div class="col col-form-control">
+                    <input name="classroom"></input>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-id">Начало:</div>
+                <div class="col col-form-control">
+                    <input type="time" name="start_time">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-id">Конец:</div>
+                <div class="col col-form-control">
+                    <input type="time" name="end_time">
+                </div>
+            </div>
+
+            <button class="btn btn-primary mt-3" type="submit">Добавить</button>
+        </form>
+    </div>
+
+        <!--  </div>-->
+    </div>
+</body>
+<script>
+    function delSched(id) {
+        const url = "/schedule/delete" + id;
+        const prom = fetch(url, {
+            method: "DELETE"
+        });
+        prom.then(() => location.reload())
+    }
+
+    function addSched(event) {
+        console.log(event)
+        event.preventDefault();
+        const form = document.getElementById("new-sched");
+        const formData = new FormData(form);
+        // let reqBody = {};
+        // formData.forEach((v,k)=>reqBody[k] = v);
+        // reqBody["teachCour"] = Number(reqBody["teachCour"]);
+        // console.log(reqBody);
+
+        fetch("/schedule/post", {
+            method: "POST",
+            body: formData
+            // body: JSON.stringify(reqBody),
+            // headers: {
+            //     'Accept': 'application/json',
+            //     'Content-Type': 'application/json'
+            // }
+        })
+            .then((response) => {
+                console.log(response);
+                console.log(location);
+                location.replace(location.href);
+
+            })
+    }
+</script>
+</html>
