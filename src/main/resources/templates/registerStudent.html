@@ -13,25 +13,37 @@
 </head>
 <body>
 <div class="container">
-    <h1 >Регистрация нового студента</h1>
+    <h1 th:if="!${id}">Регистрация нового студента</h1>
+    <h1 th:if="${id}" th:text="'Изменение карточки студента ' + ${id}"></h1>
     <form th:action="@{/register/student}" method="POST">
-        <div class="table-header">
+    <div class="table-header">
+            <div th:if="${id}" hidden>
+                <input type="text" name="id" th:value="${id}">
+            </div>
             <div class="row">
                 <div class="col col-id">Фамилия:</div>
-                <div class="col col-form-control"><input type="text" name="lastname"></div>
+                <div class="col col-form-control">
+                    <input type="text" name="lastname" th:value="${lastname}">
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col col-id">Имя:</div>
-            <div class="col col-form-control"><input type="text" name="name"></div>
+            <div class="col col-form-control">
+                <input type="text" name="name" th:value="${name}">
+            </div>
         </div>
         <div class="row">
             <div class="col col-id">Отчество:</div>
-            <div class="col col-form-control"><input type="text" name="fathername"></div>
+            <div class="col col-form-control">
+                <input type="text" name="fathername" th:value="${fathername}">
+            </div>
         </div>
         <div class="row">
             <div class="col col-id">Телефон:</div>
-            <div class="col col-form-control"><input type="tel" name="phone"></div>
+            <div class="col col-form-control">
+                <input type="tel" name="phone" th:value="${phone}">
+            </div>
         </div>
         <button class="btn btn-primary mt-3" type="submit">Сохранить</button>
     </form>
