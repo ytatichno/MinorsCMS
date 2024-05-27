@@ -17,9 +17,9 @@ public interface ScheduleRepository extends JpaRepository<Schedule, Long> {
     List<Schedule> findByDayOfWeek(String dayOfWeek);
     List<Schedule> findByClassroom(String classroom);
 
-    @Query("SELECT s FROM Schedule s WHERE s.teach_cour.course = ?1")
+    @Query("SELECT s FROM Schedule s WHERE s.teachCour.course = ?1")
     List<Schedule> findByCourse(Course course);
     @Async
-    @Query("SELECT s FROM Schedule s WHERE s.teach_cour.course = ?1")
+    @Query("SELECT s FROM Schedule s WHERE s.teachCour.course = ?1")
     CompletableFuture<List<Schedule>> findByCourseAsync(Course course);
 }

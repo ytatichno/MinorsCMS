@@ -57,7 +57,7 @@
             <div class="col col-id" >Расписание</div>
             <div class="col">
                 <div th:each="schedule : ${Понедельник}"
-                    th:text="${schedule.teach_cour.teacher.lastname}
+                    th:text="${schedule.teachCour.teacher.lastname}
                                          + ': ' + ${schedule.classroom}
                                          + ${schedule.getInterval()}"
                 >
@@ -65,7 +65,7 @@
             </div>
             <div class="col">
                 <div th:each="schedule : ${Вторник}"
-                    th:text="${schedule.teach_cour.teacher.lastname}
+                    th:text="${schedule.teachCour.teacher.lastname}
                                          + ': ' + ${schedule.classroom}
                                          + ${schedule.getInterval()}"
                 >
@@ -73,7 +73,7 @@
             </div>
             <div class="col">
                 <div th:each="schedule : ${Среда}"
-                    th:text="${schedule.teach_cour.teacher.lastname}
+                    th:text="${schedule.teachCour.teacher.lastname}
                                          + ': ' + ${schedule.classroom}
                                          + ${schedule.getInterval()}"
                 >
@@ -81,7 +81,7 @@
             </div>
             <div class="col">
                 <div th:each="schedule : ${Четверг}"
-                    th:text="${schedule.teach_cour.teacher.lastname}
+                    th:text="${schedule.teachCour.teacher.lastname}
                                          + ': ' + ${schedule.classroom}
                                          + ${schedule.getInterval()}"
                 >
@@ -89,7 +89,7 @@
             </div>
             <div class="col">
                 <div th:each="schedule : ${Пятница}"
-                    th:text="${schedule.teach_cour.teacher.lastname}
+                    th:text="${schedule.teachCour.teacher.lastname}
                                          + ': ' + ${schedule.classroom}
                                          + ${schedule.getInterval()}"
                 >
@@ -97,7 +97,7 @@
             </div>
             <div class="col">
                 <div th:each="schedule : ${Суббота}"
-                    th:text="${schedule.teach_cour.teacher.lastname}
+                    th:text="${schedule.teachCour.teacher.lastname}
                                          + ': ' + ${schedule.classroom}
                                          + ${schedule.getInterval()}"
                 >

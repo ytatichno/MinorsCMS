@@ -18,11 +18,11 @@ public class Schedule  {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "teach_cour")
     @ToString.Exclude
     @NonNull
-    private Teachers2Courses teach_cour;
+    private Teachers2Courses teachCour;
 
     @Column(name = "day_of_week")
     private String dayOfWeek;

@@ -66,9 +66,9 @@ class ScheduleRepositoryTest {
 
     }
 
-    private Schedule createSchedule(Teachers2Courses teach_cour, String classroom, String dayOfWeek, Time start_time, Time end_time) {
+    private Schedule createSchedule(Teachers2Courses teachCour, String classroom, String dayOfWeek, Time start_time, Time end_time) {
         Schedule schedule = new Schedule();
-        schedule.setTeach_cour(teach_cour);
+        schedule.setTeachCour(teachCour);
         schedule.setClassroom(classroom);
         schedule.setDayOfWeek(dayOfWeek);
         schedule.setStart_time(start_time);
@@ -80,7 +80,7 @@ class ScheduleRepositoryTest {
     void save_ShouldReturnSavedSchedule() {
         // Create a sample Schedule entity
         Schedule schedule = createSchedule(tcStub, "001", "Monday", Time.valueOf("8:45:0"), Time.valueOf("10:20:0") );
-        // Set the necessary fields (e.g., teach_cour, dayOfWeek, start_time, end_time, classroom)
+        // Set the necessary fields (e.g., teachCour, dayOfWeek, start_time, end_time, classroom)
         // ...
 
         // Save the schedule
@@ -94,7 +94,7 @@ class ScheduleRepositoryTest {
         assertEquals(schedule.getStart_time(), savedSchedule.getStart_time());
         assertEquals(schedule.getEnd_time(), savedSchedule.getEnd_time());
         assertEquals(schedule.getClassroom(), savedSchedule.getClassroom());
-        assertEquals(schedule.getTeach_cour(), savedSchedule.getTeach_cour());
+        assertEquals(schedule.getTeachCour(), savedSchedule.getTeachCour());
     }
 
     @Test
