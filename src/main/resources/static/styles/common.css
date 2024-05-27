@@ -115,6 +115,13 @@
     justify-content: space-between; /* Distribute space evenly between elements */
     align-items: center; /* Vertically align items to the center */
 }
+
+.sched-el{
+    border-bottom: 1px dashed black;
+}
+.justify-content-center{
+    justify-content: center;
+}
 /*.i-tip > *{*/
 /*    all: initial;*/
 /*    !*font: italic 1rem "Times New Roman";*!*/
