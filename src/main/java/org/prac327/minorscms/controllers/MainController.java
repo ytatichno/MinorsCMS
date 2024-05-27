@@ -242,6 +242,15 @@ public class MainController {
 
         return "/relationManager";
     }
+    @GetMapping("/scheduleManager")
+    public String scheduleManager(@RequestParam(required = false) Long course, Model model){
+        Course c = courseRepository.findById(course).orElseThrow();
+        model.addAttribute("course", c);
+        Utils.splitSchedulesToModel(scheduleRepository.findByCourse(c), model);
+        model.addAttribute("teachers", c.getTeachers());
+        return "/scheduleManager";
+
+    }
 
 
     @GetMapping("/test")
